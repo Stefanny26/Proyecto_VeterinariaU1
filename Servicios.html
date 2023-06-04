@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,54 +8,56 @@
     <title>Servicios</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
-        header{
+        header {
             background: #276955;
             color: white;
         }
 
-        footer{
+        footer {
             background: #276955;
             color: white;
         }
 
-        .navbar-brand, .nav-link{
+        .navbar-brand,
+        .nav-link {
             color: white;
             text-align: justify;
         }
 
-        .col{
+        .col {
             text-align: justify;
             color: white;
         }
 
-        .a{
+        .a {
             color: white;
         }
 
-        .columna{
+        .columna {
             padding: 10px;
             text-align: center;
         }
 
-        .main{
+        .main {
             margin-top: 50px;
             margin-bottom: 30px;
             background: white;
             padding: 20px 0;
         }
 
-        .widgets{
+        .widgets {
             margin-top: 50px;
             margin-bottom: 30px;
             background: #276955;
             color: white;
         }
 
-        .widgets>div{
+        .widgets>div {
             padding: 20px;
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-lg ">
@@ -86,7 +89,64 @@
     <main>
         <div class="container">
             <h2>Servicios</h2>
-         
+            <div class="container">
+                <div class="row">
+                    <div class="colum">
+
+                        <form action="#">
+                            <fieldset>
+                                <legend>Datos Personales</legend>
+                                <div class="row justify-content-around">
+                                    <div class="col-sm-12 col-md-6 col-xl-6">
+                                        <div class="form-group">
+                                            <label for="nombre">Nombre</label>
+                                            <input type="text" class="form-control mr-3" placeholder="Nombre"
+                                                name="nombre" id="nombre">
+
+                                            <div class="form-group">
+                                                <label for="mensaje">Cedula</label>
+                                                <input type="text" class="form-control mr-3" placeholder="Nombre"
+                                                    name="nombre" id="nombre">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 col-xl-6">
+                                        <div class="form-group">
+                                            <label for="password">Tefefono</label>
+                                            <input type="password" class="form-control mr-3" placeholder="Contraseña"
+                                                name="password" id="password">
+                                        </div>
+                                        <div class="row">
+                                            <div class=" col-sm-12 col-md-6 col-xl-6">
+                                                <div class="form-gruop">
+                                                    <label for="nombre">Mascota</label>
+                                                    <div class="form=check">
+                                                        <label class="form-check-label"></label>
+                                                        <input type="radio" name="mascota" id="canino" value="canino">
+                                                        Canino
+                                                    </div>
+                                                    <hr>
+                                                    <div class="form=check">
+                                                        <label class="form-check-label"></label>
+                                                        <input type="radio" name="mascota" id="felino" value="felino">
+                                                        Felino
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+                <textarea name="mensaje" id="mensaje" cols="10" rows="3" class="form-control"></textarea>
+                </fieldset>
+                </form>
+
+                <button class="btn btn-primary mt-4 mb-4" type="submit">Enviar</button>
+            </div>
+        </div>
+        </div>
         </div>
     </main>
 
@@ -94,23 +154,26 @@
         <div class="container">
             <div class="row justify-content-around">
                 <div class="columna col-4">
-                    <a class="nav-link" href="https://www.facebook.com/"><img src="img/facebook.jpg" alt="Facebook" width="30px">Facebook</a>
-                    <a class="nav-link" href="https://www.instagram.com/"><img src="img/instagram.jpg" alt="Instagram" width="30px">Instagram</a>
-                    <a class="nav-link" href="https://web.whatsapp.com/"><img src="img/whatsapp.jpg" alt="Whatsapp" width="30px">Whatsapp</a>
+                    <a class="nav-link" href="https://www.facebook.com/"><img src="img/facebook.jpg" alt="Facebook"
+                            width="30px">Facebook</a>
+                    <a class="nav-link" href="https://www.instagram.com/"><img src="img/instagram.jpg" alt="Instagram"
+                            width="30px">Instagram</a>
+                    <a class="nav-link" href="https://web.whatsapp.com/"><img src="img/whatsapp.jpg" alt="Whatsapp"
+                            width="30px">Whatsapp</a>
                 </div>
-    
+
                 <div class="columna col-4 text-align-center">
                     <p>Veterinaria la ESPEranza de tu mascota</p>
                     <img src="img/logo.jpg" alt="" width="100px">
                 </div>
-    
+
                 <div class="columna col-4">
                     <p>0999999999</p>
                     <p>veterinaria@ESPEranza</p>
                     <p>Santo Domingo-Ecuador</p>
                 </div>
             </div>
-            
+
         </div>
     </footer>
 </body>
