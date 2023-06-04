@@ -41,7 +41,6 @@
         .main {
             margin-top: 50px;
             margin-bottom: 30px;
-            background: white;
             padding: 20px 0;
         }
 
@@ -55,6 +54,30 @@
         .widgets>div {
             padding: 20px;
         }
+
+        .encabezado {
+            background: #41A58D;
+            padding: 6px;
+            border-radius: 2px;
+            text-align: center;
+        }
+
+        .col1 {
+            text-align: center;
+        }
+
+        form {
+            padding: 15px;
+
+        }
+
+        .reset {
+            all: revert;
+        }
+        form{
+            background-color: #fffcdd;
+        }
+        
     </style>
 </head>
 
@@ -87,65 +110,162 @@
         </nav>
     </header>
     <main>
-        <div class="container">
-            <h2>Solicitud de Adopcion</h2>
-            <div class="container">
-                <div class="row">
-                    <div class="colum">
+        <div class="container container2">
+            <div class=" row">
+                <div class="col-12 mt-2">
+                    <div class="encabezado">
+                        <h3>Solicitud de Adopcion</h3>
+                    </div>
+                    <form action="#">
+                        <fieldset class="reset">
+                            <legend class="reset">
+                                <h3>Datos Personales</h3>
+                            </legend>
 
-                        <form action="#">
                             <div class="row justify-content-around">
                                 <div class="col-sm-12 col-md-6 col-xl-6">
                                     <div class="form-group">
-                                        <label for="nombre">Nombre</label>
-                                        <input type="text" class="form-control mr-3" placeholder="Nombre" name="nombre"
-                                            id="nombre">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Nombre</div>
+                                            </div>
+                                            <input type="text" name="" id="" class="form-control">
+                                        </div>
 
-                                        <div class="form-group">
-                                            <label for="mensaje">Cedula</label>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Numero de cedula</div>
+                                            </div>
+                                            <input type="text" name="" id="" class="form-control">
+                                        </div>
 
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Correo</div>
+                                            </div>
+                                            <input type="text" name="" id="" class="form-control">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-6 col-xl-6">
                                     <div class="form-group">
-                                        <label for="password">Tefefono</label>
-                                        <input type="password" class="form-control mr-3" placeholder="Contraseña"
-                                            name="password" id="password">
-                                    </div>
-                                    <div class="row">
-                                        <div class=" col-sm-12 col-md-6 col-xl-6">
-                                            <div class="form-gruop">
-                                                <label for="nombre">Mascota</label>
-                                                <div class="form=check">
-                                                    <label class="form-check-label"></label>
-                                                    <input type="radio" name="mascota" id="canino" value="canino">
-                                                    Canino
-                                                </div>
-                                                <hr>
-                                                <div class="form=check">
-                                                    <label class="form-check-label"></label>
-                                                    <input type="radio" name="mascota" id="felino" value="felino">
-                                                    Felino
-                                                </div>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Celular</div>
                                             </div>
+                                            <input type="text" name="" id="" class="form-control">
+                                        </div>
+
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Dirección</div>
+                                            </div>
+                                            <input type="text" name="" id="" class="form-control">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Ocupación</div>
+                                            </div>
+                                            <input type="text" name="" id="" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-12 col-xl-12">
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col1 col-6">
+                                            <p>Me interesa adoptar </p>
+                                        </div>
+                                        <div class=" col-6">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" name="mascota" id="radioPersonalizado3"
+                                                    class="custom-control-input">
+                                                <label for="radioPersonalizado3"
+                                                    class="custom-control-label">Canino</label>
+                                            </div>
+
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" name="mascota" id="radioPersonalizado4"
+                                                    class="custom-control-input">
+                                                <label for="radioPersonalizado4"
+                                                    class="custom-control-label">Felino</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <form action="#">
+                        <fieldset class="reset">
+                            <legend class="mb-3 reset">
+                                <h3>Situacion Familiar</h3>
+                            </legend>
+
+                            <div class="row justify-content-around">
+                                <div class="col-sm-12 col-md-6 col-xl-6">
+                                    <div class="form-group">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend mr-3">
+                                                <p>Personas que vivan con usted</p>
+                                            </div>
+                                            <input type="text" name="" id="" class="form-control">
                                         </div>
 
                                     </div>
                                 </div>
+
+                                <div class="col-sm-12 col-md-6 col-xl-6">
+                                    <div class="row">
+                                        <div class="col1 col-3">
+                                            <p>Tipo de inmueble </p>
+                                        </div>
+                                        <div class=" col-6">
+                                            <div class="custom-control custom-checkbox">
+                                                <div class="custom-control custom-checkbox mr-4">
+                                                    <input type="checkbox" name="casa" id="checkboxPersonalizado1"
+                                                        class="custom-control-input">
+                                                    <label for="checkboxPersonalizado1"
+                                                        class="custom-control-label">Casa propia</label>
+                                                </div>
+
+                                                <div class="custom-control custom-checkbox mr-4">
+                                                    <input type="checkbox" name="casa" id="checkboxPersonalizado2"
+                                                        class="custom-control-input">
+                                                    <label for="checkboxPersonalizado2"
+                                                        class="custom-control-label">Departamento</label>
+                                                </div>
+
+                                                <div class="custom-control custom-checkbox mr-4">
+                                                    <input type="checkbox" name="casa" id="checkboxPersonalizado3"
+                                                        class="custom-control-input">
+                                                    <label for="checkboxPersonalizado3"
+                                                        class="custom-control-label">Otro</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-                    </div>
+                        </fieldset>
+                    </form>
+                    <form action="#">
+                        <fieldset class="reset">
+                            <legend class="reset mb-3">
+                                <h3>Preguntas Varias</h3>
+                            </legend>
+                            <div class="form-group">
+                                ¿Por que desea adoptar?
+                                <textarea name="mensaje" id="mensaje" cols="10" rows="3"
+                                    class="form-control"></textarea>
+                            </div>
+                        </fieldset>
+                        
+            <a class="btn btn-primary mt-3" onclick="alert('Su formulario fue enviado con Exito!')" href="Servicios.html"> Enviar formulario</a>
+                    </form>
                 </div>
-                <textarea name="mensaje" id="mensaje" cols="10" rows="3" class="form-control"></textarea>
-                </form>
-
-                <button class="btn btn-primary mt-4 mb-4" type="submit">Enviar</button>
             </div>
-        </div>
-        </div>
-
-
-
         </div>
     </main>
 
