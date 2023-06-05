@@ -1,17 +1,20 @@
 header{
     background-color: #276955;
-   
+   padding: 10px;
 }
 #contacto, #especialidad, #servicios, #inicio {
     color: aliceblue;
 }
 
 #contacto:hover, #especialidad:hover, #servicios:hover, #inicio:hover {
-    color: #41A58D;
+    color: #15a85f;
 }
+
 
 body {
     background-color: #f8f9fa;
+
+
   }
 
   #container2 {
