@@ -55,6 +55,18 @@
         .widgets>div {
             padding: 20px;
         }
+
+        .reset {
+            all: revert;
+        }
+
+        .encabezado {
+            background: #41A58D;
+            padding: 6px;
+            border-radius: 2px;
+            text-align: center;
+
+        }
     </style>
 </head>
 
@@ -88,63 +100,235 @@
     </header>
     <main>
         <div class="container">
-            <h2>Servicios</h2>
             <div class="container">
                 <div class="row">
                     <div class="colum">
-
-                        <form action="#">
-                            <fieldset>
-                                <legend>Datos Personales</legend>
-                                <div class="row justify-content-around">
-                                    <div class="col-sm-12 col-md-6 col-xl-6">
-                                        <div class="form-group">
-                                            <label for="nombre">Nombre</label>
-                                            <input type="text" class="form-control mr-3" placeholder="Nombre"
-                                                name="nombre" id="nombre">
-
-                                            <div class="form-group">
-                                                <label for="mensaje">Cedula</label>
-                                                <input type="text" class="form-control mr-3" placeholder="Nombre"
-                                                    name="nombre" id="nombre">
+                        <div class="encabezado mt-3">
+                            <h3>Adopción</h3>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-5 ">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-12">
+                                            <img src="img/Adopcion-mascotas.jpg" class="img-thumbnail  card-img-top "
+                                                alt="adopcion" style="width:200%">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="card-body">
+                                                <br>
+                                                <p class="card-text">Este trámite esta designado para todas aquellas
+                                                    personas que requieran una mascota de compañía, ya sean rescatados,
+                                                    abandonados y/o dejados al cuidado del albergue canino municipal y
+                                                    sus técnicos . El usuario debe visitar el albergue y escoger la
+                                                    mascota, el técnico verifica el lugar de destino del adoptado,
+                                                    posteriormente llenar un acta de adopción.</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-12 col-md-6 col-xl-6">
-                                        <div class="form-group">
-                                            <label for="password">Tefefono</label>
-                                            <input type="password" class="form-control mr-3" placeholder="Contraseña"
-                                                name="password" id="password">
+                                </div>
+                            </div>
+                            <div class="col-7 ">
+                                <div class="card">
+                                    <div class="card-header text-center">
+                                        <h5 class="card-title">¿Qué necesito para hacer el trámite?</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">Este trámite esta designado para todas aquellas personas
+                                            que requieran una mascota de compañía, ya sean rescatados, abandonados y/o
+                                            dejados al cuidado del albergue canino municipal y sus técnicos .
+                                        <ol class="list-group list-group-numbered">
+                                            <li class="list-group-item">Copia de cédula</li>
+                                            <li class="list-group-item">Llenar formulario de adopción</li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                                <div class="card mt-3">
+                                    <div class="card-header text-center">
+                                        <h5 class="card-title">¿Cómo hago el trámite?</h5>
+                                    </div>
+                                    <div class="card-body ">
+                                        <p class="card-text">
+                                        <ol>
+                                            <li>Comunicarse con nosotros y dejanos conocer
+                                                la mascota que desee adoptar o a través del sitio web,</li>
+                                            <li>Coordinar con el técnico a cargo la mascota idónea para el solicitante,
+                                            </li>
+                                            <li>Inspección de verificación del técnico a la vivienda del adoptante,</li>
+                                            <li>Llenar el formulario de adopción.</li>
+                                        </ol>
+                                        </p>
+                                        <p class="text-center"><a href="FormularioServicios.html"
+                                                class="btn btn-info ">Llenar</a></p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-12 mt-3">
+                            <div class="card text-dark bg-white mb-3 text-center">
+                                <div class="card-header encabezado">
+                                    <h5 class="card-title ">Separa tu cita medica</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" name="cita" id="radioPersonalizado3"
+                                                    class="custom-control-input">
+                                                <label for="radioPersonalizado3" class="custom-control-label">Consulta
+                                                    en la clínica </label>
+                                            </div>
                                         </div>
-                                        <div class="row">
-                                            <div class=" col-sm-12 col-md-6 col-xl-6">
-                                                <div class="form-gruop">
-                                                    <label for="nombre">Mascota</label>
-                                                    <div class="form=check">
-                                                        <label class="form-check-label"></label>
-                                                        <input type="radio" name="mascota" id="canino" value="canino">
-                                                        Canino
+                                        <div class="col-6">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" name="cita" id="radioPersonalizado4"
+                                                    class="custom-control-input">
+                                                <label for="radioPersonalizado4" class="custom-control-label">Consulta a
+                                                    domicilio</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row mt-3">
+                            <div class="col-6 ">
+                                <form action="">
+                                    <div class="card">
+                                        <div class="card-header text-center">
+                                            <h5 class="card-title">Datos Personales</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text" id="basic-addon1">Nombre</span>
+                                                <input type="text" class="form-control" placeholder="Nombre de usuario"
+                                                    aria-label="Nombre de usuario" aria-describedby="basic-addon1">
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text" id="basic-addon1">Cédula</span>
+                                                <input type="number" class="form-control"
+                                                    placeholder="Cedula de usuario" aria-label="Cedula de usuario"
+                                                    aria-describedby="basic-addon1">
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text" id="basic-addon2">Correo</span>
+                                                <input type="text" class="form-control"
+                                                    placeholder="Nombre de usuario del destinatario"
+                                                    aria-label="Nombre de usuario del destinatario"
+                                                    aria-describedby="basic-addon2">
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text" id="basic-addon1">Teléfono</span>
+                                                <input type="number" class="form-control"
+                                                    placeholder="Cedula de usuario" aria-label="Cedula de usuario"
+                                                    aria-describedby="basic-addon1">
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text" id="basic-addon2">Dirección</span>
+                                                <input type="text" class="form-control"
+                                                    placeholder="Dirección de usuario del destinatario"
+                                                    aria-label="Dirección de usuario del destinatario"
+                                                    aria-describedby="basic-addon2">
+                                            </div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- Segundo formulario-->
+                            <div class="col-6 ">
+
+                                <form action="">
+                                    <div class="card">
+                                        <div class="card-header text-center">
+                                            <h5 class="card-title">Datos de la mascota</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text" id="basic-addon1">Nombre</span>
+                                                <input type="text" class="form-control" placeholder="Nombre de usuario"
+                                                    aria-label="Nombre de usuario" aria-describedby="basic-addon1">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Edad</span>
+                                                        <input type="number" class="form-control"
+                                                            placeholder="Edad de la mascota"
+                                                            aria-label="Edad de la mascota"
+                                                            aria-describedby="basic-addon1">
                                                     </div>
-                                                    <hr>
-                                                    <div class="form=check">
-                                                        <label class="form-check-label"></label>
-                                                        <input type="radio" name="mascota" id="felino" value="felino">
-                                                        Felino
+
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Raza</span>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Raza de la mascota"
+                                                            aria-label="Raza de la mascota"
+                                                            aria-describedby="basic-addon1">
                                                     </div>
                                                 </div>
                                             </div>
 
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Color</span>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Color de la mascota"
+                                                            aria-label="Color de la mascota"
+                                                            aria-describedby="basic-addon1">
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-6">
+
+                                                    <div class="input-group mb-3">
+                                                        <label class="input-group-text"
+                                                            for="inputGroupSelect01">Opciones</label>
+                                                        <select class="form-select" id="inputGroupSelect01">
+                                                            <option selected>Seleccionar...</option>
+                                                            <option value="1">Macho</option>
+                                                            <option value="2">Hembra</option>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="input-group">
+                                                <span class="input-group-text">Síntomas</span>
+                                                <textarea class="form-control" aria-label="With textarea"></textarea>
+                                            </div>
+                                            </p>
                                         </div>
+                                        </p>
                                     </div>
-                                </div>
+                            </div>
+
+                            </form>
+                        </div>
+
                     </div>
                 </div>
-                <textarea name="mensaje" id="mensaje" cols="10" rows="3" class="form-control"></textarea>
-                <textarea name="mensaje" id="mensaje" cols="10" rows="3" class="form-control"></textarea>    
-            </fieldset>
-                </form>
+                <p class="text-center"><button class="btn btn-primary mt-4 mb-4" type="submit">Enviar</button></p>
 
-                <button class="btn btn-primary mt-4 mb-4" type="submit">Enviar</button>
             </div>
         </div>
         </div>
