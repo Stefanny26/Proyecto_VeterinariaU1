@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Especialidades</title>
     <link rel="stylesheet" href="css\bootstrap.min.css">
+    <link rel="stylesheet" href="css\inicio.css">
+    <link rel="shortcut icon" href="img/huella.png" type="image/x-icon">
     <style>
         .header {
             background-color: #276955;
@@ -14,83 +17,190 @@
             text-align: center;
             border-radius: 5px;
         }
-        img{
-            width: 160px ;
 
+        p{
+            font-family: "Times New Roman", Times, serif
+        }
+
+        .columna {
+            
+            border: 2px solid #276955; 
+            border-radius: 5px; 
+            padding-top: 5px; 
+            text-align: justify;
+            
         }
     </style>
+
 </head>
+
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="#" style="color: rgb(255, 255, 255);"> <strong>Veterinaria</strong> </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link " href="#" id="inicio">
+                                <strong>Inicio</strong>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#" id="servicios">
+                                <strong>Servicios</strong>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="especialidad">
+                                <strong>Especialidades</strong>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="contacto">
+                                <strong>Contacto</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
     <div class="container">
-        <ul class="nav justify-content-end">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Servicios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Especialidades</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contacto</a>
-            </li>
-          </ul>
-        <div class="row">
+        
+        <div class="row my-5">
 
-           
-                <div class="header col-12 col-sm col-md col-xl-12">
 
-                    <h1>Especialidades</h1>
-    
+            <div class="header col-12 col-sm col-md col-xl-12">
+
+                <h1 style=" font: italic bold 30px/30px Georgia, serif">Especialidades</h1>
+
             </div>
         </div>
         <br>
         <br>
         <div class="row justify-content-between">
-            <div class="columna col-3">
-                <img src="1.jpg" class="rounded" width="200px" height="120px">
-                
-                    <h1>Traumatología</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio vitae iure nemo velit adipisci aliquid. </p>
-                    
-                
+            <div class="columna col-lg-3  col-xl-3 col-md col-sm  mb-4">
+                <img src="img\1.jpg" class="rounded-circle" width="200px" height="120px">
+                <br>
+                <br>
+                <h1 style=" font: italic bold 30px/30px Georgia, serif; text-align: center">Traumatología</h1>
+
+                <p>La traumatología es la rama de la veterinaria que se encarga del estudio del aparato
+                    locomotor, es decir,
+                    se encarga del estudio del sistema músculo-esquelético.
+                </p>
+
+
             </div>
 
-            <div class="columna col-3">
-                <img src="2.jpg" class="rounded" width="200px" height="120px">
-                <h1>Neurología</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio vitae iure nemo velit adipisci aliquid. </p>
-                    
+            <div class="columna col-lg-3  col-xl-3 col-md col-sm  mb-4">
+                <img src="img\2.jpg" class="rounded-circle" width="200px" height="120px" style="text-align: center;">
+                <br>
+                <br>
+                <h1 style=" font: italic bold 30px/30px Georgia, serif; text-align: center;">Neurología</h1>
+                <p>La neurología en pequeños animales supone un gran esfuerzo para el profesional veterinario,
+                    ya que los pacientes no son capaces de trasmitir verbalmente lo que sienten o donde les molesta.
+                    Nuestra mascota puede sufrir cualquier tipo de patología neurológica,
+                    desde extrusiones discales en las que puede dejar de caminar, hasta lesiones intracraneales con peor
+                    pronóstico.
+                </p>
+
             </div>
-            <div class="columna col-3">
-                <img src="3.jpg"  class="rounded" width="200px" height="120px">
-                <h1>Oncología</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio vitae iure nemo velit adipisci aliquid. </p>
+            <div class="columna col-lg-3  col-xl-3 col-md col-sm  mb-4">
+                <img src="img\3.jpg" class="rounded-circle" width="200px" height="120px">
+                <br>
+                <br>
+                <h1 style=" font: italic bold 30px/30px Georgia, serif; text-align: center">Oncología</h1>
+                <p>El principal propósito de la oncología veterinaria es perseguir el bienestar de los pacientes con
+                    cáncer.
+                    Mejorando la calidad de vida, minimizando los trastornos orgánicos que produce la enfermedad,
+                    prolongando así la sobrevida del paciente.
+                </p>
             </div>
+        </div>
+        <br>
+        <div class="row justify-content-between">
+            <div class="columna col-lg-3  col-xl-3 col-md col-sm  mb-4">
+                <img src="img\4.jpg" class="rounded-circle" width="200px" height="120px">
+                <br>
+                <br>
+
+                <h1 style=" font: italic bold 30px/30px Georgia, serif; text-align: center">Neuro-cirugías</h1>
+                <p>Realizamos todo tipo de intervenciones quirúrgicas del sistema nervioso central y sistema nervioso
+                    periférico
+                    o estructuras adyacentes a estos. Tenemos una amplia experiencia es en cirugías oncológicas del
+                    sistema nervioso.
+                    Asi también en otras afecciones talescomo hidrocefalia y su tratamiento quirúrgico
+                    (como es la implantación de una válvula de drenaje con derivación ventrículo peritoneal).
+                </p>
+
+
+            </div>
+
+            <div class="columna col-lg-3 col-xl-3 col-md col-sm  mb-4">
+                <img src="img\5.jpg" class="rounded-circle" width="200px" height="120px">
+                <br>
+                <br>
+                <h1 style=" font: italic bold 30px/30px Georgia, serif; text-align: center">Dermatología</h1>
+                <p>La dermatología veterinaria estudio veterinario que se encarga del diagnóstico y tratamiento de
+                    trastornos de la piel,
+                    las orejas, el cabello, las uñas, los cascos y la boca de los animales. Específicamente, los
+                    dermatólogos veterinarios
+                    tienen capacitación y experiencia significativas en el manejo de enfermedades alérgicas de la piel.
+                </p>
+
+            </div>
+            <div class="columna col-lg-3  col-xl-3 col-md col-sm  mb-4">
+                <img src="img\6.jpg" class="rounded-circle" width="200px" height="120px">
+                <br>
+                <br>
+                <h1 style=" font: italic bold 30px/30px Georgia, serif; text-align: center">Fisioterapia</h1>
+                <p>Trabajamos con diferentes técnicas para aliviar dolores y molestias postoperatorias o
+                    anomalías neurológicas de tus mascotas.
+                </p>
+            </div>
+        </div>
+        <br>
+        <hr style="border-color: #276955; border-width: 10px; border-radius: 5px;"><br>
+
+        <div class="row justify-content-center">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/o0immv9uhtw"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
     </div>
-    <br>
-    <div class="row justify-content-between">
-        <div class="columna col-3">
-            <img src="1.jpg" class="rounded" width="200px" height="120px">
-            
-                <h1>Traumatología</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio vitae iure nemo velit adipisci aliquid. </p>
-                
-            
-        </div>
+    <footer class="text-white py-3 mt-5">
+        <div class="container">
+            <div class="row ">
+                <div class="col-4">
+                    <a class="nav-link" href="https://www.facebook.com/"><img src="img/facebook.jpg" alt="Facebook"
+                            width="30px">Facebook</a>
+                    <a class="nav-link" href="https://www.instagram.com/"><img src="img/instagram.jpg" alt="Instagram"
+                            width="30px">Instagram</a>
+                    <a class="nav-link" href="https://web.whatsapp.com/"><img src="img/whatsapp.jpg" alt="Whatsapp"
+                            width="30px">Whatsapp</a>
+                </div>
 
-        <div class="columna col-3">
-            <img src="2.jpg" class="rounded" width="200px" height="120px">
-            <h1>Neurología</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio vitae iure nemo velit adipisci aliquid. </p>
-                
+                <div class="col-4 text-center">
+                    <p>Veterinaria la Esperanza de tu mascota</p>
+                    <img src="img/logo.jpg" alt="" width="100px">
+                </div>
+
+                <div class="col-4 text-end " id="con">
+                    <p>0999999999</p>
+                    <p>veterinaria@esperanza</p>
+                    <p>Santo Domingo-Ecuador</p>
+                </div>
+            </div>
         </div>
-        <div class="columna col-3">
-            <img src="3.jpg"  class="rounded" width="200px" height="120px">
-            <h1>Oncología</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio vitae iure nemo velit adipisci aliquid. </p>
-        </div>
-</div>
+    </footer>
 </body>
+
 </html>
