@@ -1,196 +1,223 @@
-header{
-    background-color: #276955;
-   padding: 10px;
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   z-index: 9999;
+header {
+  background-color: #276955; /* Establece el color de fondo del encabezado */
+  padding: 10px; /* Agrega un espacio interno de 10px alrededor del encabezado */
+  position: fixed; /* Establece la posición del encabezado como fija */
+  top: 0; /* Fija la posición superior del encabezado en la parte superior de la ventana */
+  left: 0; /* Fija la posición izquierda del encabezado en el borde izquierdo de la ventana */
+  width: 100%; /* Establece el ancho del encabezado al 100% del contenedor padre */
+  z-index: 9999; /* Establece el índice z del encabezado para que esté por encima de otros elementos */
 }
+
 #contacto, #especialidad, #servicios, #inicio {
-    color: aliceblue;
+  color: aliceblue; /* Establece el color de texto para los elementos con los ID 'contacto', 'especialidad', 'servicios' e 'inicio' */
 }
 
 #contacto:hover, #especialidad:hover, #servicios:hover, #inicio:hover {
-    color: #15a85f;
+  color: #15a85f; /* Establece el color de texto cuando se realiza un hover (se pasa el ratón por encima) en los elementos con los ID 'contacto', 'especialidad', 'servicios' e 'inicio' */
 }
+
 .navbar-toggler-icon {
-  filter: invert(1);
+  filter: invert(1); /* Invierte los colores de la imagen del icono del cambiador de la barra de navegación */
 }
-footer{
-  padding: 200px;
+
+footer {
+  padding: 200px; /* Agrega un espacio interno de 200px alrededor del pie de página */
 }
-.footer-copyright{
-  margin-top: 30px;
-  margin-bottom: 11px;
+
+.footer-copyright {
+  margin-top: 30px; /* Establece un margen superior de 30px para el elemento con la clase 'footer-copyright' */
+  margin-bottom: 11px; /* Establece un margen inferior de 11px para el elemento con la clase 'footer-copyright' */
 }
+
 /* Estilos para el footer */
 footer {
-  background-color: #333333;
+  background-color: #333333; /* Establece el color de fondo del pie de página */
 }
 
 footer a {
-  color: #ffffff;
-  text-decoration: none;
-  margin-right: 10px;
+  color: #ffffff; /* Establece el color de texto para los enlaces dentro del pie de página */
+  text-decoration: none; /* Quita la decoración de subrayado de los enlaces dentro del pie de página */
+  margin-right: 10px; /* Establece un margen derecho de 10px para los enlaces dentro del pie de página */
 }
 
 footer a:hover {
-  color: #15a85f;
+  color: #15a85f; /* Establece el color de texto cuando se realiza un hover (se pasa el ratón por encima) en los enlaces dentro del pie de página */
 }
 
 footer p {
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Establece un margen inferior de 10px para los párrafos dentro del pie de página */
 }
 
 .footer-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  display: flex; /* Establece el contenedor del pie de página como un contenedor flexible */
+  flex-direction: column; /* Establece la dirección de columna para los elementos dentro del contenedor del pie de página */
+  align-items: center; /* Centra los elementos horizontalmente dentro del contenedor del pie de página */
+  text-align: center; /* Centra el texto dentro del contenedor del pie de página */
 }
 
 .social-links {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Establece un margen inferior de 20px para los enlaces de redes sociales dentro del pie de página */
 }
 
 .logo {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Establece un margen inferior de 20px para el logotipo dentro del pie de página */
 }
 
 .contact-info p {
-  margin: 5px 0;
+  margin: 5px 0; /* Establece un margen superior e inferior de 5px y ningún margen izquierdo y derecho para los párrafos de información de contacto dentro del pie de página */
 }
+
 .separator-line {
-  width: 100%;
-  height: 1px;
-  background-color: #ffffff;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  width: 100%; /* Establece el ancho de la línea separadora al 100% del contenedor padre */
+  height: 1px; /* Establece la altura de la línea separadora en 1px */
+  background-color: #ffffff; /* Establece el color de fondo de la línea separadora */
+  margin-bottom: 20px; /* Establece un margen inferior de 20px para la línea separadora */
+  margin-top: 20px; /* Establece un margen superior de 20px para la línea separadora */
 }
 
 footer .container {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 15px; /* Establece un espacio interno de 15px a la izquierda del contenedor dentro del pie de página */
+  padding-right: 15px; /* Establece un espacio interno de 15px a la derecha del contenedor dentro del pie de página */
 }
 
 footer .row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: flex; /* Establece la fila dentro del pie de página como un contenedor flexible */
+  flex-wrap: wrap; /* Permite que los elementos de la fila se envuelvan a la siguiente línea si no hay suficiente espacio */
+  justify-content: space-between; /* Distribuye los elementos de la fila de manera uniforme con espacios iguales entre ellos */
 }
 
 footer .col-md-4 {
-  flex: 0 0 33.33%;
-  max-width: 33.33%;
+  flex: 0 0 33.33%; /* Establece la flexibilidad de la columna en 33.33% del ancho del contenedor padre */
+  max-width: 33.33%; /* Establece el ancho máximo de la columna en 33.33% del ancho del contenedor padre */
 }
 
 footer .col-md-4.text-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: flex; /* Establece la columna como un contenedor flexible */
+  flex-direction: column; /* Establece la dirección de columna para los elementos dentro de la columna */
+  align-items: center; /* Centra los elementos horizontalmente dentro de la columna */
 }
 
 footer .col-md-4.text-md-end {
-  text-align: end;
+  text-align: end; /* Alinea el texto a la derecha dentro de la columna en dispositivos de tamaño mediano */
 }
 
 footer .col-md-12.text-center p {
-  margin-bottom: 0;
+  margin-bottom: 0; /* Establece un margen inferior de 0 para los párrafos dentro de la columna que está centrada horizontalmente */
 }
 
 footer .container .row:last-child .col-md-12.text-center {
-  padding-top: 10px;
-  border-top: 1px solid #aaaaaa;
-  margin-top: 15px;
+  padding-top: 10px; /* Agrega un espacio interno de 10px en la parte superior de la última columna en la última fila del pie de página */
+  border-top: 1px solid #aaaaaa; /* Agrega una línea superior de 1px sólida con el color #aaaaaa a la última columna en la última fila del pie de página */
+  margin-top: 15px; /* Establece un margen superior de 15px para la última columna en la última fila del pie de página */
 }
 
 footer .container .row:last-child .col-md-12.text-center p {
-  margin-bottom: 0;
+  margin-bottom: 0; /* Establece un margen inferior de 0 para los párrafos dentro de la última columna en la última fila del pie de página */
 }
 
 footer .container .row:last-child .col-md-12.text-center strong {
-  font-weight: bold;
+  font-weight: bold; /* Establece el estilo de fuente en negrita para los elementos 'strong' dentro de la última columna en la última fila del pie de página */
 }
 
-
 body {
-    background-color: #f8f9fa;
+  background-color: #f8f9fa; /* Establece el color de fondo del cuerpo */
+}
 
+#container2 {
+  padding-top: 50px; /* Agrega un espacio interno de 50px en la parte superior del elemento con el ID 'container2' */
+}
 
-  }
+.text-center {
+  text-align: center; /* Alinea el texto al centro */
+}
 
-  #container2 {
-    padding-top: 50px;
-  }
+.mission-vision {
+  background-color: #fff; /* Establece el color de fondo del contenedor con la clase 'mission-vision' */
+  border-radius: 10px; /* Establece un radio de borde de 10px para el contenedor con la clase 'mission-vision' */
+  padding: 20px; /* Agrega un espacio interno de 20px alrededor del contenedor con la clase 'mission-vision' */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Agrega una sombra al contenedor con la clase 'mission-vision' */
+  margin-bottom: 30px; /* Establece un margen inferior de 30px para el contenedor con la clase 'mission-vision' */
+}
 
-  .text-center {
-    text-align: center;
-  }
+.mission-vision h3 {
+  color: #333; /* Establece el color de texto para los elementos 'h3' dentro del contenedor con la clase 'mission-vision' */
+  font-size: 24px; /* Establece el tamaño de fuente en 24px para los elementos 'h3' dentro del contenedor con la clase 'mission-vision' */
+  font-weight: bold; /* Establece el peso de fuente en negrita para los elementos 'h3' dentro del contenedor con la clase 'mission-vision' */
+  margin-bottom: 10px; /* Establece un margen inferior de 10px para los elementos 'h3' dentro del contenedor con la clase 'mission-vision' */
+}
 
-  .mission-vision {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-  }
+.mission-vision p {
+  color: #666; /* Establece el color de texto para los párrafos dentro del contenedor con la clase 'mission-vision' */
+  font-size: 16px; /* Establece el tamaño de fuente en 16px para los párrafos dentro del contenedor con la clase 'mission-vision' */
+  line-height: 1.5; /* Establece la altura de línea en 1.5 para los párrafos dentro del contenedor con la clase 'mission-vision' */
+}
 
-  .mission-vision h3 {
-    color: #333;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
+.rounded-image {
+  border-radius: 50%; /* Establece un radio de borde de 50% para las imágenes redondeadas */
+  width: 150px; /* Establece el ancho de las imágenes redondeadas en 150px */
+  height: 150px; /* Establece la altura de las imágenes redondeadas en 150px */
+  object-fit: cover; /* Ajusta las imágenes redondeadas dentro de su contenedor manteniendo su relación de aspecto */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Agrega una sombra a las imágenes redondeadas */
+  margin-bottom: 10px; /* Establece un margen inferior de 10px para las imágenes redondeadas */
+}
 
-  .mission-vision p {
-    color: #666;
-    font-size: 16px;
-    line-height: 1.5;
-  }
+.styled-list {
+  list-style-type: square; /* Establece el tipo de viñeta como cuadrado para las listas con la clase 'styled-list' */
+  padding-left: 20px; /* Agrega un espacio interno de 20px en el lado izquierdo de las listas con la clase 'styled-list' */
+}
 
-  .rounded-image {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  .styled-list {
-    list-style-type: square;
-    padding-left: 20px;
-  }
 footer{
-    background-color: #276955;
+  background-color: #276955; /* Establece el color de fondo del pie de página */
 }
 
 a{
-  color: #fff;
+  color: #fff; /* Establece el color de texto para los enlaces */
 }
-#con :hover  {
-  color: #a57141;
+
+#con:hover  {
+  color: #a57141; /* Cambia el color de texto a #a57141 cuando se realiza un desplazamiento sobre el elemento con el ID 'con' */
 }
+
 .navbar-nav .nav-item {
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-right: 10px; /* Establece un margen derecho de 10px para los elementos de navegación en la barra de navegación */
+  margin-left: 10px; /* Establece un margen izquierdo de 10px para los elementos de navegación en la barra de navegación */
 }
+
 hr.line-fade {
-  background-color: #15a85f;
-  height: 2px;
-  border: none;
-  animation: line-fade 4s linear infinite;
+  background-color: #15a85f; /* Establece el color de fondo de la línea */
+  height: 2px; /* Establece la altura de la línea en 2px */
+  border: none; /* Elimina el borde de la línea */
+  animation: line-fade 4s linear infinite; /* Aplica una animación llamada 'line-fade' a la línea con una duración de 4 segundos, un efecto lineal y se repite infinitamente */
 }
 
 @keyframes line-fade {
   0% {
-    width: 100%;
+      width: 100%; /* Establece el ancho de la línea al 100% al inicio de la animación */
   }
   50% {
-    width: 0%;
+      width: 0%; /* Establece el ancho de la línea a 0% en la mitad de la animación */
   }
   100% {
-    width: 100%;
+      width: 100%; /* Establece el ancho de la línea al 100% al final de la animación */
   }
 }
 
-  
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.col-sm-12,
+.col-md-6,
+.col-lg-6,
+.img-slide-in{
+  animation: slideIn 1s forwards;
+  opacity: 0;
+}
