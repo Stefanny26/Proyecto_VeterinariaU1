@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
     <style>
         header {
             background: #276955;
@@ -72,7 +73,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg ">
+        <nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm">
             <div class="container">
                 <a class="navbar-brand" href="#">Veterinaria</a>
                 <button class="navbar-toggler" type="text" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -82,16 +83,16 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Inicio</a>
+                            <a class="nav-link" href="index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Servicios</a>
+                            <a class="nav-link" href="Servicios.html">Servicios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Especialidades</a>
+                            <a class="nav-link" href="Especialidades.html">Especialidades</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
+                            <a class="nav-link" href="contacto.html">Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -102,12 +103,12 @@
         <div class="container">
             <div class="container">
                 <div class="row">
-                    <div class="colum">
+                    <div class="colum ">
                         <div class="encabezado mt-3">
                             <h3>Adopción</h3>
                         </div>
                         <div class="row mt-3">
-                            <div class="col-5 ">
+                            <div class="col-md-5 col-lg-5 col-sm-12">
                                 <div class="card mb-3" style="max-width: 540px;">
                                     <div class="row g-0">
                                         <div class="col-md-12">
@@ -128,7 +129,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-7 ">
+                            <div class="col-md-7 col-lg-7 col-sm-12">
                                 <div class="card">
                                     <div class="card-header text-center">
                                         <h5 class="card-title">¿Qué necesito para hacer el trámite?</h5>
@@ -138,8 +139,8 @@
                                             que requieran una mascota de compañía, ya sean rescatados, abandonados y/o
                                             dejados al cuidado del albergue canino municipal y sus técnicos .
                                         <ol class="list-group list-group-numbered">
-                                            <li class="list-group-item">Copia de cédula</li>
-                                            <li class="list-group-item">Llenar formulario de adopción</li>
+                                            <li class="list-group-item">1. Copia de cédula</li>
+                                            <li class="list-group-item">2. Llenar formulario de adopción</li>
                                         </ol>
                                         </p>
                                     </div>
@@ -162,7 +163,7 @@
                                         </ol>
                                         </p>
                                         <p class="text-center"><a href="FormularioServicios.html"
-                                                class="btn btn-info ">Llenar</a></p>
+                                                class="btn btn-info ">Llenar Solicitud</a></p>
                                     </div>
                                 </div>
 
@@ -171,166 +172,224 @@
 
                         </div>
 
-                        <div class="col-12 mt-3">
-                            <div class="card text-dark bg-white mb-3 text-center">
-                                <div class="card-header encabezado">
-                                    <h5 class="card-title ">Separa tu cita medica</h5>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" name="cita" id="radioPersonalizado3"
-                                                    class="custom-control-input">
-                                                <label for="radioPersonalizado3" class="custom-control-label">Consulta
-                                                    en la clínica </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" name="cita" id="radioPersonalizado4"
-                                                    class="custom-control-input">
-                                                <label for="radioPersonalizado4" class="custom-control-label">Consulta a
-                                                    domicilio</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
 
 
                         <div class="row mt-3">
-                            <div class="col-6 ">
+                            <div class="col-12 ">
                                 <form action="">
-                                    <div class="card">
-                                        <div class="card-header text-center">
-                                            <h5 class="card-title">Datos Personales</h5>
+
+                                    <div class="col-12 mt-3">
+                                        <div class="card text-dark bg-white mb-3 text-center">
+                                            <div class="card-header encabezado">
+                                                <h5 class="card-title ">Separa tu cita medica</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" name="cita" id="radioPersonalizado3"
+                                                                class="custom-control-input" required>
+                                                            <label for="radioPersonalizado3"
+                                                                class="custom-control-label">Consulta
+                                                                en la clínica </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" name="cita" id="radioPersonalizado4"
+                                                                class="custom-control-input" required>
+                                                            <label for="radioPersonalizado4"
+                                                                class="custom-control-label">Consulta a
+                                                                domicilio</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="card-body">
-                                            <p class="card-text">
-                                            <div class="input-group mb-3">
-                                                <span class="input-group-text" id="basic-addon1">Nombre</span>
-                                                <input type="text" class="form-control" placeholder="Nombre de usuario"
-                                                    aria-label="Nombre de usuario" aria-describedby="basic-addon1">
-                                            </div>
+                                    </div>
 
-                                            <div class="input-group mb-3">
-                                                <span class="input-group-text" id="basic-addon1">Cédula</span>
-                                                <input type="number" class="form-control"
-                                                    placeholder="Cedula de usuario" aria-label="Cedula de usuario"
-                                                    aria-describedby="basic-addon1">
-                                            </div>
 
-                                            <div class="input-group mb-3">
-                                                <span class="input-group-text" id="basic-addon2">Correo</span>
-                                                <input type="text" class="form-control"
-                                                    placeholder="espe@edu.ec"
-                                                    aria-label="Correo"
-                                                    aria-describedby="basic-addon2">
-                                            </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-12 col-sm-12">
 
-                                            <div class="input-group mb-3">
-                                                <span class="input-group-text" id="basic-addon1">Teléfono</span>
-                                                <input type="number" class="form-control"
-                                                    placeholder="Teléfono de usuario" aria-label="Teléfono de usuario"
-                                                    aria-describedby="basic-addon1">
-                                            </div>
+                                            <div class="card">
+                                                <div class="card-header text-center">
+                                                    <h5 class="card-title">Datos Personales</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p class="card-text">
+                                                    <div class="input-group mb-3">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text" for="validationCustom01">
+                                                                Nombre</div>
+                                                        </div>
+                                                        <input type="text" name="" class="form-control"
+                                                            placeholder="Nombre de usuario" id="validationCustom01"
+                                                            required>
+                                                    </div>
 
-                                            <div class="input-group mb-3">
-                                                <span class="input-group-text" id="basic-addon2">Dirección</span>
-                                                <input type="text" class="form-control"
-                                                    placeholder="Dirección de usuario del destinatario"
-                                                    aria-label="Dirección de usuario del destinatario"
-                                                    aria-describedby="basic-addon2">
+                                                    <div class="input-group mb-3">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text" for="validationCustom02">
+                                                                Número de cedula</div>
+                                                        </div>
+                                                        <input type="number" min="1" name="" class="form-control"
+                                                            placeholder="Cedula de usuario" id="validationCustom02"
+                                                            required>
+                                                    </div>
+
+                                                    <div class="input-group mb-3">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="basic-addon2"
+                                                                for="validationCustom03">Correo</span>
+                                                        </div>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="espe@edu.ec" aria-label="Correo"
+                                                            aria-describedby="basic-addon2" id="validationCustom03"
+                                                            required>
+                                                    </div>
+
+                                                    <div class="input-group mb-3">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="basic-addon1"
+                                                                for="validationCustom04">Teléfono</span>
+                                                        </div>
+                                                        <input type="number" min="1" class="form-control"
+                                                            placeholder="Teléfono de usuario"
+                                                            aria-label="Teléfono de usuario"
+                                                            aria-describedby="basic-addon1" id="validationCustom04"
+                                                            required>
+                                                    </div>
+
+                                                    <div class="input-group mb-3">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="basic-addon2"
+                                                                for="validationCustom05">Dirección</span>
+                                                        </div>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Dirección de usuario del destinatario"
+                                                            aria-label="Dirección de usuario del destinatario"
+                                                            aria-describedby="basic-addon2" id="validationCustom05"
+                                                            required>
+                                                    </div>
+                                                    </p>
+                                                </div>
                                             </div>
-                                            </p>
                                         </div>
+                                        <!-- Segundo formulario-->
+                                        <div class="col-lg-6 col-md-12 col-sm-12 ">
+                                            <div class="card">
+                                                <div class="card-header text-center">
+                                                    <h5 class="card-title">Datos de la mascota</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p class="card-text">
+                                                    <div class="input-group mb-3">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text" for="validationCustom06">
+                                                                Nombre</div>
+                                                        </div>
+                                                        <input type="text" name="" class="form-control"
+                                                            placeholder="Nombre de mascota" id="validationCustom06"
+                                                            required>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-md-12 col-ms-12 ">
+                                                            <div class="input-group mb-3">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text" id="basic-addon1"
+                                                                        for="validationCustom07">Edad</span>
+                                                                </div>
+                                                                <input type="number" min="1" class="form-control"
+                                                                    placeholder="Edad de la mascota"
+                                                                    aria-label="Edad de la mascota"
+                                                                    aria-describedby="basic-addon1"
+                                                                    id="validationCustom07" required>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-12 col-ms-12">
+                                                            <div class="input-group mb-3">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text" id="basic-addon1"
+                                                                        for="validationCustom08">Raza</span>
+                                                                </div>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Raza de la mascota"
+                                                                    aria-label="Raza de la mascota"
+                                                                    aria-describedby="basic-addon1"
+                                                                    id="validationCustom08" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-md-12 col-ms-12">
+                                                            <div class="input-group mb-3">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text" id="basic-addon1"
+                                                                        for="validationCustom09">Color</span>
+                                                                </div>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Color de la mascota"
+                                                                    aria-label="Color de la mascota"
+                                                                    aria-describedby="basic-addon1"
+                                                                    id="validationCustom09" required>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-12 col-ms-12">
+
+                                                            <div class="input-group mb-3">
+                                                                <div class="input-group-prepend">
+                                                                    <label class="input-group-text "
+                                                                        for="validationCustom10">Sexo</label>
+                                                                </div>
+                                                                <select name="" class="custom-select  "
+                                                                    id="validationCustom10" required>
+                                                                    <option selected>Elija una opción</option>
+                                                                    <option value="1">Macho</option>
+                                                                    <option value="2">Hembra</option>
+
+                                                                </select>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text"
+                                                                for="validationCustom11">Síntomas</span>
+                                                        </div>
+                                                        <textarea class="form-control" aria-label="With textarea"
+                                                            id="validationCustom10" required></textarea>
+                                                    </div>
+                                                    </p>
+                                                </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-center mt-3">
+                                        <div class="custom-control custom-checkbox ">
+                                            <input type="checkbox" name="" id="checkboxPersonalizado1" required
+                                                class="custom-control-input">
+                                            <label for="checkboxPersonalizado1" class="custom-control-label">Acepto
+                                                terminos y
+                                                condiciones</label>
+                                        </div>
+                                        <button class="btn btn-info mt-3" type="submit" href="Servicios.html">Enviar
+                                            formulario</button></p>
                                     </div>
                                 </form>
                             </div>
-                            <!-- Segundo formulario-->
-                            <div class="col-6 ">
-
-                                <form action="">
-                                    <div class="card">
-                                        <div class="card-header text-center">
-                                            <h5 class="card-title">Datos de la mascota</h5>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">
-                                            <div class="input-group mb-3">
-                                                <span class="input-group-text" id="basic-addon1">Nombre</span>
-                                                <input type="text" class="form-control" placeholder="Nombre de usuario"
-                                                    aria-label="Nombre de usuario" aria-describedby="basic-addon1">
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-6">
-                                                    <div class="input-group mb-3">
-                                                        <span class="input-group-text" id="basic-addon1">Edad</span>
-                                                        <input type="number" class="form-control"
-                                                            placeholder="Edad de la mascota"
-                                                            aria-label="Edad de la mascota"
-                                                            aria-describedby="basic-addon1">
-                                                    </div>
-
-                                                </div>
-                                                <div class="col-6">
-                                                    <div class="input-group mb-3">
-                                                        <span class="input-group-text" id="basic-addon1">Raza</span>
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Raza de la mascota"
-                                                            aria-label="Raza de la mascota"
-                                                            aria-describedby="basic-addon1">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-6">
-                                                    <div class="input-group mb-3">
-                                                        <span class="input-group-text" id="basic-addon1">Color</span>
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Color de la mascota"
-                                                            aria-label="Color de la mascota"
-                                                            aria-describedby="basic-addon1">
-                                                    </div>
-
-                                                </div>
-                                                <div class="col-6">
-
-                                                    <div class="input-group mb-3">
-                                                        <label class="input-group-text"
-                                                            for="inputGroupSelect01">Opciones</label>
-                                                        <select class="form-select" id="inputGroupSelect01">
-                                                            <option selected>Seleccionar...</option>
-                                                            <option value="1">Macho</option>
-                                                            <option value="2">Hembra</option>
-                                                        </select>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="input-group">
-                                                <span class="input-group-text">Síntomas</span>
-                                                <textarea class="form-control" aria-label="With textarea"></textarea>
-                                            </div>
-                                            </p>
-                                        </div>
-                                        </p>
-                                    </div>
-                            </div>
-
-                            </form>
                         </div>
-
                     </div>
                 </div>
-                <p class="text-center"><button class="btn btn-info mt-4 mb-4" type="submit "onclick="alert('Su información fue enviado con Exito!')">Enviar información</button></p>
-
             </div>
-        </div>
+
         </div>
         </div>
     </main>
@@ -349,7 +408,7 @@
 
                 <div class="columna col-4 text-align-center">
                     <p>Veterinaria la ESPEranza de tu mascota</p>
-                    <img src="img/logo.jpg" alt="" width="100px">
+                    <img src="img/logo.png" alt="" width="100px">
                 </div>
 
                 <div class="columna col-4">

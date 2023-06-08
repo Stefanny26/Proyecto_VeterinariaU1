@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulafio de Adopcion</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
     <style>
         header {
             background: #276955;
@@ -70,7 +71,10 @@
             padding: 15px;
         }
 
-
+        form {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 20px;
+        }
     </style>
 </head>
 
@@ -86,16 +90,16 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Inicio</a>
+                            <a class="nav-link" href="index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Servicios</a>
+                            <a class="nav-link" href="Servicios.html">Servicios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Especialidades</a>
+                            <a class="nav-link" href="Especialidades.html">Especialidades</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
+                            <a class="nav-link" href="contacto.html">Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -110,7 +114,7 @@
                         <h3>Solicitud de Adopcion</h3>
                     </div>
                     <div class="col-12 ">
-                        <form action="">
+                        <form action="" class="needs-validation">
                             <div class="card">
                                 <div class="card-header ">
                                     <h5 class="card-title">Datos Personales</h5>
@@ -118,68 +122,86 @@
                                 <div class="card-body">
                                     <p class="card-text">
                                     <div class="row justify-content-around">
-                                        <div class="col-sm-12 col-md-6 col-xl-6">
+                                        <div class="col-sm-12 col-md-12 col-xl-6">
                                             <div class="form-group">
                                                 <div class="input-group mb-3">
                                                     <div class="input-group-prepend">
-                                                        <div class="input-group-text">Nombre</div>
+                                                        <div class="input-group-text" for="validationCustom01">Nombre
+                                                        </div>
                                                     </div>
-                                                    <input type="text" name="" id="" class="form-control">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Nombre de usuario" id="validationCustom01"
+                                                        required>
                                                 </div>
 
                                                 <div class="input-group mb-3">
                                                     <div class="input-group-prepend">
-                                                        <div class="input-group-text">Numero de cedula</div>
+                                                        <div class="input-group-text" for="validationDefault02">Número
+                                                            de cedula</div>
                                                     </div>
-                                                    <input type="text" name="" id="" class="form-control">
+                                                    <input type="number" min="1" class="form-control"
+                                                        id="validationCustom02" required
+                                                        placeholder="Cédula de usuario">
                                                 </div>
 
                                                 <div class="input-group mb-3">
                                                     <div class="input-group-prepend">
-                                                        <div class="input-group-text">Correo</div>
+                                                        <div class="input-group-text" for="validationDefault03">Correo
+                                                        </div>
                                                     </div>
-                                                    <input type="text" name="" id="" class="form-control">
+                                                    <input type="text" class="form-control" id="validationCustom03"
+                                                        required placeholder="espe@edu.ec">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-12 col-md-6 col-xl-6">
+
+                                        <div class="col-sm-12 col-md-12 col-xl-6">
+
                                             <div class="form-group">
                                                 <div class="input-group mb-3">
                                                     <div class="input-group-prepend">
-                                                        <div class="input-group-text">Celular</div>
+                                                        <div class="input-group-text" for="validationDefault04">Teléfono
+                                                        </div>
                                                     </div>
-                                                    <input type="text" name="" id="" class="form-control">
+                                                    <input type="number" min="1" class="form-control"
+                                                        id="validationCustom04" required
+                                                        placeholder="Teléfono de usuario">
                                                 </div>
 
                                                 <div class="input-group mb-3">
                                                     <div class="input-group-prepend">
-                                                        <div class="input-group-text">Dirección</div>
+                                                        <div class="input-group-text" for="validationDefault05">
+                                                            Dirección</div>
                                                     </div>
-                                                    <input type="text" name="" id="" class="form-control">
+                                                    <input type="text" id="validationCustom05" required
+                                                        class="form-control"
+                                                        placeholder="Dirección de usuario del destinatario">
                                                 </div>
                                                 <div class="input-group mb-3">
                                                     <div class="input-group-prepend">
-                                                        <div class="input-group-text">Ocupación</div>
+                                                        <div class="input-group-text " for="validationDefault06">
+                                                            Ocupación</div>
                                                     </div>
-                                                    <input type="text" name="" id="" class="form-control">
+                                                    <input type="text" id="validationCustom06" class="form-control"
+                                                        placeholder="Ocupación del usuario">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-12 col-md-12 col-xl-12">
                                             <hr>
                                             <div class="row">
-                                                <div class="col1 col-6">
+                                                <div class="col1 col-6 mt-3">
                                                     <p>Me interesa adoptar </p>
                                                 </div>
-                                                <div class=" col-6">
-                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                <div class=" col-6 mt-3">
+                                                    <div class="custom-control custom-radio ">
                                                         <input type="radio" name="mascota" id="radioPersonalizado3"
                                                             class="custom-control-input">
                                                         <label for="radioPersonalizado3"
                                                             class="custom-control-label">Canino</label>
                                                     </div>
 
-                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                    <div class="custom-control custom-radio ">
                                                         <input type="radio" name="mascota" id="radioPersonalizado4"
                                                             class="custom-control-input">
                                                         <label for="radioPersonalizado4"
@@ -192,97 +214,85 @@
                                     </p>
                                 </div>
                             </div>
-                        </form>
-                    </div>
-                    <div class="col-12 ">
-                        <form action="">
-                            <div class="card">
+
+                            <div class="card mt-3">
                                 <div class="card-header ">
-                                    <h5 class="card-title">Datos Personales</h5>
+                                    <h5 class="card-title">Situación Familiar</h5>
                                 </div>
                                 <div class="card-body">
                                     <p class="card-text">
                                     <div class="row justify-content-around">
-                                        <div class="col-sm-12 col-md-6 col-xl-6">
+                                        <div class="col-sm-12 col-md-12 col-xl-6">
                                             <div class="form-group">
                                                 <div class="input-group mb-3">
-                                                    <div class="input-group-prepend mr-3">
+                                                    <div class="input-group-prepend mr-3 " for="validationCustom04">
                                                         <p>Personas que vivan con usted</p>
                                                     </div>
-                                                    <input type="text" name="" id="" class="form-control">
+                                                    <input type="number" class="form-control" id="validationCustom04"
+                                                        min="1" required>
                                                 </div>
 
                                             </div>
                                         </div>
 
-                                        <div class="col-sm-12 col-md-6 col-xl-6">
+                                        <div class="col-sm-12 col-md-12 col-xl-6">
                                             <div class="row">
-                                                <div class="col1 col-3">
-                                                    <p>Tipo de inmueble </p>
+                                                <div class="col1 col-sm-12 col-md-12 col-xl-6">
+                                                    <label for="validationCustom04" class="form-label">Tipo de
+                                                        inmueble</label>
                                                 </div>
-                                                <div class=" col-6">
-                                                    <div class="custom-control custom-checkbox">
-                                                        <div class="custom-control custom-checkbox mr-4">
-                                                            <input type="checkbox" name="casa"
-                                                                id="checkboxPersonalizado1"
-                                                                class="custom-control-input">
-                                                            <label for="checkboxPersonalizado1"
-                                                                class="custom-control-label">Casa propia</label>
-                                                        </div>
+                                                <div class=" col-sm-12 col-md-12 col-xl-6">
 
-                                                        <div class="custom-control custom-checkbox mr-4">
-                                                            <input type="checkbox" name="casa"
-                                                                id="checkboxPersonalizado2"
-                                                                class="custom-control-input">
-                                                            <label for="checkboxPersonalizado2"
-                                                                class="custom-control-label">Departamento</label>
-                                                        </div>
+                                                    <select name="" class="custom-select custom-select-md mb-3"
+                                                        id="validationCustom04 "  required>
+                                                        <option selected>Elija una opción</option>
+                                                        <option value="1">Casa propia</option>
+                                                        <option value="2">Departamento</option>
+                                                        <option value="3">Quinta</option>
+                                                        <option value="4">Finca</option>
+                                                    </select>
 
-                                                        <div class="custom-control custom-checkbox mr-4">
-                                                            <input type="checkbox" name="casa"
-                                                                id="checkboxPersonalizado3"
-                                                                class="custom-control-input">
-                                                            <label for="checkboxPersonalizado3"
-                                                                class="custom-control-label">Otro</label>
-                                                        </div>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                     </p>
                                 </div>
                             </div>
-                        </form>
-                    </div>
 
-                    <div class="col-12 ">
-                        <form action="">
-                            <div class="card">
+                            <div class="card mt-3">
                                 <div class="card-header ">
-                                    <h5 class="card-title">Datos Personales</h5>
+                                    <h5 class="card-title">Preguntas Varias</h5>
                                 </div>
                                 <div class="card-body">
                                     <p class="card-text">
 
-                                    <div class="form-group">
+                                    <div class="form-group" for="validationCustom08">
                                         ¿Por que desea adoptar?
-                                        <textarea name="mensaje" id="mensaje" cols="10" rows="3"
+                                        <textarea name="mensaje" id="validationCustom08" cols="10" rows="3"
                                             class="form-control"></textarea>
-
                                     </div>
                                     </p>
                                 </div>
-                            </div>
-                        </form>
-                        <p class="text-center"> <a class="btn btn-info mt-3"
-                                onclick="alert('Su formulario fue enviado con Exito!')" href="Servicios.html"> Enviar
-                                formulario</a></p>
 
+                            </div>
+
+                            <div class="col-12 text-center mt-3">
+                                <div class="custom-control custom-checkbox ">
+                                    <input type="checkbox" name="" id="checkboxPersonalizado1" required
+                                        class="custom-control-input">
+                                    <label for="checkboxPersonalizado1" class="custom-control-label">Acepto terminos y
+                                        condiciones</label>
+                                </div>
+                                <button class="btn btn-info mt-3" type="submit" href="Servicios.html">Enviar
+                                    formulario</button></p>
+                            </div>
+
+                        </form>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
         </div>
     </main>
@@ -301,7 +311,7 @@
 
                 <div class="columna col-4 text-align-center">
                     <p>Veterinaria la ESPEranza de tu mascota</p>
-                    <img src="img/logo.jpg" alt="" width="100px">
+                    <img src="img/logo.png" alt="" width="100px">
                 </div>
 
                 <div class="columna col-4">
