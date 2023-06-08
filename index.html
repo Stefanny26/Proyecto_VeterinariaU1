@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/inicio.css">
     <link rel="shortcut icon" href="img/huella.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" crossorigin="anonymous">
+
     
 </head> 
 <body>
@@ -23,7 +25,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link " href="#container2" target="_blank" id="inicio">
+                            <a class="nav-link " href="#container2" id="inicio">
                               <strong>Inicio</strong>
                               </a>
                         </li>
@@ -68,7 +70,7 @@
                       </div>
                     </div>
                   </div>
-            <hr>
+            <hr style="background-color: #15a85f;">
             <div class="row">
               <div class="col-sm-12 col-md-6 col-lg-6 mt-5 mb-5">
                   <div class="card">
@@ -115,13 +117,13 @@
               </div>
           </div>
           
-            <hr>
+          <hr style="background-color: #15a85f;">
             <div class="row">
-                <div class="col-12">
-                  <h1 class="text-center mb-5 mt-5">Nuestros Pacientes</h1>
-                </div>
+              <div class="col-12">
+                <h1 class="text-center mb-5 mt-5" style="font-size: 2.5rem; color: #15a85f; font-weight: bold; text-transform: uppercase;">Nuestros Pacientes</h1>
+              </div>
             </div>
-              
+            
             <div class="row">
               <div class="col-12">
                 <main>
@@ -129,21 +131,21 @@
                       <div class="carousel-inner">
                           <div class="carousel-item active">
                               <div class="row">
-                                  <div class="col">
+                                  <div class="col d-lg-block d-none">
                                       <img class="d-block w-100" src="img/image4.jfif" alt="Slide 1">
                                       <div class="carousel-caption">
                                           <h3 style="text-shadow: 1px 1px 1px black; ">Capitán</h3>
                                           <p style="text-shadow: 1px 1px 1px black; ">"Me siento muy protegido"</p>
                                       </div>
                                   </div>
-                                  <div class="col">
+                                  <div class="col d-md-block d-none d-lg-block">
                                       <img class="d-block w-100" src="img/image3.jpg" alt="Slide 2">
                                       <div class="carousel-caption">
                                           <h3 style="text-shadow: 1px 1px 1px black; ">Pelusita</h3>
                                           <p style="text-shadow: 1px 1px 1px black; ">"Siempre nos tratan muy bien, estamos como en casa"</p>
                                       </div>
                                   </div>
-                                  <div class="col">
+                                  <div class="col d-sm-block ">
                                       <img class="d-block w-100" src="img/image1.jpg" alt="Slide 3">
                                       <div class="carousel-caption">
                                           <h3 style="text-shadow: 1px 1px 1px black; ">Rock</h3>
@@ -155,43 +157,130 @@
                       </div>
                       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
                           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Anterior</span>
+                          <span class="visually-hidden"></span>
                       </a>
                       <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
                           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Posterior</span>
+                          <span class="visually-hidden"></span>
                       </a>
                   </div>
               </main>
-              
-              
-            
               </div>
             </div>
               
     </main>
-    <footer class="text-white py-3 mt-5">
-      <div class="container">
-          <div class="row ">
-              <div class="col-4" >
-                  <a class="nav-link" href="https://www.facebook.com/"><img src="img/facebook.jpg" alt="Facebook" width="30px">Facebook</a>
-                  <a class="nav-link" href="https://www.instagram.com/"><img src="img/instagram.jpg" alt="Instagram" width="30px">Instagram</a>
-                  <a class="nav-link" href="https://web.whatsapp.com/"><img src="img/whatsapp.jpg" alt="Whatsapp" width="30px">Whatsapp</a>
-              </div>
-  
-              <div class="col-4 text-center">
-                  <p>Veterinaria la Esperanza de tu mascota</p>
-                  <img src="img/logo.jpg" alt="" width="100px">
-              </div>
 
-              <div class="col-4 text-end " id="con">
-                  <p >0999999999</p>
-                  <p>veterinaria@esperanza</p>
-                  <p>Santo Domingo-Ecuador</p>
+    <footer class="text-white py-3 mt-5 d-sm-none d-none d-lg-block"> <!--Primer footer-->
+      <div class="container">
+          <div class="row">
+              <div class="col-md-4 col-sm-12">
+                  <a class="nav-link" href="https://www.facebook.com/">
+                      <i><img src="img/facebook.jpg" alt="" srcset=""></i> Facebook
+                  </a>
+                  <a class="nav-link" href="https://www.instagram.com/">
+                      <i><img src="img/instagram.jpg" alt=""></i> Instagram
+                  </a>
+                  <a class="nav-link" href="https://web.whatsapp.com/">
+                      <i><img src="img/whatsapp.jpg" alt=""></i> Whatsapp
+                  </a>
+              </div>
+              <div class="col-md-4 col-sm-12 text-center">
+                  <strong class="mb-3">Veterinaria la Esperanza de tu mascota</strong>
+                  <img src="img/Proyecto nuevo.png" alt="" width="100px" class="mb-3">
+              </div>
+              <div class="col-md-4 col-sm-12 text-md-end align-items-end">
+                  <p>+(593) 975 999 999</p>
+                  <p>veterinaria@esperanza.com</p>
+                  <p>Santo Domingo - Ecuador</p>
+              </div>
+          </div>
+      </div>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12 col-sm-12 text-center">
+                  <p class="mb-0">© 2023 Todos los derechos reservados</p>
               </div>
           </div>
       </div>
   </footer>
+  <footer class="text-white py-3 mt-5 d-md-block d-none d-sm-none d-lg-none"> <!--Segundo footer-->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <a class="nav-link" href="https://www.facebook.com/">
+                    <i><img src="img/facebook.jpg" alt="" srcset=""></i> Facebook
+                </a>
+                <a class="nav-link" href="https://www.instagram.com/">
+                    <i><img src="img/instagram.jpg" alt=""></i> Instagram
+                </a>
+                <a class="nav-link" href="https://web.whatsapp.com/">
+                    <i><img src="img/whatsapp.jpg" alt=""></i> Whatsapp
+                </a>
+            </div>
+            <div class="col-12 text-center">
+                <strong class="mb-3 ">Veterinaria la Esperanza de tu mascota <br></strong>
+                <img src="img/logo.jpg" alt="" width="100px" class="mb-3 mt-3">
+            </div>
+            <div class="col-12 text-center align-items-end">
+                <p>+(593) 975 999 999</p>
+                <p>veterinaria@esperanza.com</p>
+                <p>Santo Domingo - Ecuador</p>
+                <hr style="background-color: aliceblue;">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="mb-0">© 2023 Todos los derechos reservados</p>
+            </div>
+        </div>
+    </div>
+</footer>
+  
+<footer class="text-white py-3 mt-5 d-md-none d-lg-none d-sm-block">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="footer-container">
+                  <div class="social-links">
+                      <a class="nav-link" href="https://www.facebook.com/">
+                          <i><img src="img/facebook.jpg" alt="" srcset=""></i> Facebook
+                      </a>
+                      <a class="nav-link" href="https://www.instagram.com/">
+                          <i><img src="img/instagram.jpg" alt=""></i> Instagram
+                      </a>
+                      <a class="nav-link" href="https://web.whatsapp.com/">
+                          <i><img src="img/whatsapp.jpg" alt=""></i> Whatsapp
+                      </a>
+                  </div>
+                  <div class="logo">
+                      <strong>Veterinaria la Esperanza de tu mascota</strong>
+                      <br>
+                      <img src="img/logo.jpg" alt="" width="100px" class="mb-3 mt-3">
+                  </div>
+                  <div class="contact-info">
+                      <p><span>+(593) 97 599 9999</span></p>
+                      <p><span>veterinaria@esperanza.com</span></p>
+                      <p><span>Santo Domingo - Ecuador</span></p>
+                      <div class="separator-line"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-12 text-center">
+              <p class="mb-0">© 2023 Todos los derechos reservados</p>
+          </div>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+  
   
 </body>
 </html>
