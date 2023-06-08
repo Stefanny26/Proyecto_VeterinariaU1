@@ -1,6 +1,11 @@
 header{
     background-color: #276955;
    padding: 10px;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 9999;
 }
 #contacto, #especialidad, #servicios, #inicio {
     color: aliceblue;
@@ -66,6 +71,10 @@ a{
 }
 #con :hover  {
   color: #a57141;
+}
+.navbar-nav .nav-item {
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 
