@@ -7,7 +7,19 @@ header {
   width: 100%; /* Establece el ancho del encabezado al 100% del contenedor padre */
   z-index: 9999; /* Establece el índice z del encabezado para que esté por encima de otros elementos */
 }
+/* Estilos para resaltar el grupo cuando el mouse está sobre el texto */
+.list-group-item:hover {
+  box-shadow: 0 0 2px 1px #15a85f;
+}
+.con-mision:hover{
+  box-shadow: 0 0 2px 1px #15a85f;
+}     
+.imagen-carru{
+  box-shadow: 0 0 2px 1px #15a85f;
+}        
 
+                    
+                  
 #contacto, #especialidad, #servicios, #inicio {
   color: aliceblue; /* Establece el color de texto para los elementos con los ID 'contacto', 'especialidad', 'servicios' e 'inicio' */
 }
