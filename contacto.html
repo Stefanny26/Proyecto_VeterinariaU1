@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="shortcut icon" href="img/huella.png" type="image/x-icon">
     <style>
         header{
             background: #276955;
@@ -53,30 +55,58 @@
         .widgets>div{
             padding: 20px;
         }
+
+        h2{
+            color: #276955;
+        }
+
+        .colum{
+            color: #276955;
+        }
+
+        h5, h6{
+            text-align: center;
+        }
+
+        
+
+        img{
+            border-radius: 10%;
+        }
     </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg ">
+        <!--Menu-->
+        <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
-                <a class="navbar-brand" href="#">Veterinaria</a>
-                <button class="navbar-toggler" type="text" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="#container2" style="color: rgb(255, 255, 255);"> <strong>Veterinaria</strong> </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Inicio</a>
+                            <a class="nav-link " href="index.html" target="_blank" id="inicio">
+                              <strong>Inicio</strong>
+                              </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Servicios</a>
+                            <a class="nav-link " href="Servicios.html" target="_blank" id="servicios">
+                              <strong>Servicios</strong>
+                              </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Especialidades</a>
+                            <a class="nav-link" href="Especialidades.html" target="_blank" id="especialidad">
+                              <strong>Especialidades</strong>
+                              </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
+                            <a class="nav-link" href="#contacto" id="contacto">
+                              <strong>Contacto</strong>
+                              </a>
                         </li>
                     </ul>
                 </div>
@@ -84,64 +114,190 @@
         </nav>
     </header>
     <main>
-        <div class="container">
+        <div class="container" id="contacto">
+            <br>
             <h2>Conoce más de nuestros doctores</h2>
             <section class="row widgets justify-content-between">
-                <div class="col-12 col-md-4 col-lg-3">
-                    <h5>Stefany</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Nunc maximus, nulla ut commodo sagittis, sapien dui mattis
-                         dui, non pulvinar lorem felis nec erat</p>
+                <div class="col-12 col-md-4 col-lg-3 text-align-center">
+                    <h5><b>Traumatóloga</b></h5>
+                    <img src="img/Stefy.jpg" alt="" width="200px" height="250px"> <br><br>
+                    <h6><b>Stefany</b></h6> 
+                    <p>
+                        Con 7 años de experiencia en el diagnóstico preciso y 
+                        tratamiento de diversas afecciones musculoesqueléticas. 
+                        Ofrece una atención integral a los animales que han sufrido lesiones traumáticas.
+                    </p>
                 </div>
 
                 <div class="col-12 col-md-4 col-lg-3">
-                    <h5>Liss</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Nunc maximus, nulla ut commodo sagittis, sapien dui mattis
-                        dui, non pulvinar lorem felis nec erat</p>
+                    <h5><b>Fisioterapeuta</b></h5>
+                    <p>Nuestra profesional se ha dedicado más de 5 años a proporcionar una atención excepcional 
+                        y terapia de vanguardia para mejorar la calidad de vida y promover la recuperación de 
+                        nuestras queridas mascotas.</p>
+                        <h6>Liss</h6>
+                    <img src="img/Liss.jpg" alt="" width="200px" height="250px">
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-3 text-align-center">
+                    <h5><b>Cardióloga</b></h5>
+                    <img src="img/Marii.jpg" alt="" width="200px" height="250px"><br><br>
+                    <h6>Marii</h6>
+                    <p>Con 8 años de experiencia y conocimientos avanzados, brinda diagnóstico preciso, tratamiento 
+                        especializado y cuidado compasivo para problemas cardíacos en animales, asegurando su bienestar
+                         cardiovascular.</p>
                 </div>
 
                 <div class="col-12 col-md-4 col-lg-3">
-                    <h5>Marii</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Nunc maximus, nulla ut commodo sagittis, sapien dui mattis
-                        dui, non pulvinar lorem felis nec erat</p>
+                    <h5><b>Oncólogo</b></h5>
+                    <p>Con 10 años de experiencia en diagnóstico temprano del cáncer, opciones de tratamiento avanzadas y 
+                        cuidados paliativos, trabaja incansablemente para mejorar la calidad de vida de los animales 
+                        afectados por esta enfermedad.</p>
+                        <h6>Ángel</h6>
+                    <img src="img/Angel.jpg" alt="" width="200px" height="250px">
+                </div>
+            </section>
+
+            <section class="row justify-content-center">
+                <div class="col-12 col-md-4 col-lg-3">
+                    <h2>Contacto</h2>
                 </div>
 
-                <div class="col-12 col-md-4 col-lg-3">
-                    <h5>Angel</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Nunc maximus, nulla ut commodo sagittis, sapien dui mattis
-                        dui, non pulvinar lorem felis nec erat</p>
+                <div class="col-12 col-md-8">
+                    <img src="img/gatitos.jpg" alt="" width="320px" height="120px">
+                    <img src="img/perritos.jpg" alt=""width="320px" height="120px"> <br><br>
                 </div>
+            </section>
+            
+            <section class="row justify-content-start">
+                <div class="colum col-12 col-md-5">
+                    <a><img src="img/direccion.jpg" alt="" width="40px"> Vía Santo Domingo - Via Quevedo Km. 24 Hda. Zoila Luz Avenida Quevedo 3-703-914, Santo Domingo 230153</a><br><br>
+                    <a><img src="img/horario.jpg" alt="" width="40px"> Lunes-Viernes 7:00-15:30</a><br><br>
+                    <a><img src="img/correo.jpg" alt="" width="40px"> veterinaria@ESPEranza</a><br><br>
+                    <a><img src="img/telefono.jpg" alt="" width="40px"> (02) 272-2246</a><br><br>
+                    <a><img src="img/what.jpg" alt="" width="40px"> 0999999999</a><br><br>
+                </div>
+            
+                <div class="colum col-12 col-md-7 justify-content-around">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15958.859259761703!2d-79.3094716!3d-0.4127086!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d53237044f39bb%3A0x24ed753bfe34c98b!2sUniversidad%20de%20las%20Fuerzas%20Armadas%20-%20ESPE%20-%20Santo%20Domingo!5e0!3m2!1ses!2sec!4v1685996518441!5m2!1ses!2sec" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <br><br>
             </section>
             
         </div>
     </main>
 
-    <footer class="text-white text-center py-3">
-        <div class="container">
-            <div class="row justify-content-around">
-                <div class="columna col-4">
-                    <a class="nav-link" href="https://www.facebook.com/"><img src="img/facebook.jpg" alt="Facebook" width="30px">Facebook</a>
-                    <a class="nav-link" href="https://www.instagram.com/"><img src="img/instagram.jpg" alt="Instagram" width="30px">Instagram</a>
-                    <a class="nav-link" href="https://web.whatsapp.com/"><img src="img/whatsapp.jpg" alt="Whatsapp" width="30px">Whatsapp</a>
+    <footer class="text-white py-3 mt-5 d-sm-none d-none d-lg-block"> <!--Primer footer-->
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <a class="nav-link" href="https://www.facebook.com/" target="_blank">
+                    <i><img src="img/facebook.jpg" alt="" srcset=""></i>Facebook
+                </a>
+                <a class="nav-link" href="https://www.instagram.com/" target="_blank">
+                  <i><img src="img/instagram.jpg" alt=""></i>Instagram
+                  <a class="nav-link" href="https://web.whatsapp.com/" target="_blank">
+                      <i><img src="img/whatsapp.jpg" alt=""></i>Whatsapp Web
+                  </a>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-12 text-center">
+                <strong class="mb-3">Veterinaria la Esperanza de tu mascota</strong>
+                <img src="img/Proyecto nuevo.png" alt="" width="100px" class="mb-3">
+            </div>
+            <div class="col-md-4 col-sm-12 text-md-end align-items-end">
+                <p>Ecuador</p>
+                <p>Santo Domingo</p>
+                <p>+(593) 975 999 999</p>
+                <p>Barrio: Luz de America</p>
+                <p>veterinaria@esperanza.com</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+          
+            <div class="col-md-12 col-sm-12 text-center">
+                <p class="mb-0">© 2023 Todos los derechos reservados</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<footer class="text-white py-3 mt-5 d-md-block d-none d-sm-none d-lg-none"> <!--Segundo footer-->
+  <div class="container">
+      <div class="row">
+          <div class="col-12 text-center">
+              <a class="nav-link" href="https://www.facebook.com/" target="_blank">
+                  <i><img src="img/facebook.jpg" alt="" srcset=""></i> Facebook
+              </a>
+              
+              
+              <a class="nav-link" href="https://www.instagram.com/" target="_blank">
+                  <i><img src="img/instagram.jpg" alt=""></i> Instagram
+              </a>
+              <a class="nav-link" href="https://web.whatsapp.com/" target="_blank">
+                  <i><img src="img/whatsapp.jpg" alt=""></i> Whatsapp Web
+              </a>
+          </div>
+          <div class="col-12 text-center">
+              <strong class="mb-3 ">Veterinaria la Esperanza de tu mascota <br></strong>
+              <img src="img/Proyecto nuevo.png" alt="" width="100px" class="mb-3 mt-3">
+          </div>
+          <div class="col-12 text-center align-items-end">
+              <p>Ecuador</p>
+              <p>Santo Domingo</p>
+              <p>+(593) 975 999 999</p>
+              <p>Barrio: Luz de America</p>
+              <p>veterinaria@esperanza.com</p>
+              <hr style="background-color: aliceblue;">
+          </div>
+      </div>
+  </div>
+  <div class="container">
+      <div class="row">
+          <div class="col-12 text-center">
+              <p class="mb-0">© 2023 Todos los derechos reservados</p>
+          </div>
+      </div>
+  </div>
+</footer>
+<footer class="text-white py-3 mt-5 d-md-none d-lg-none d-sm-block " >
+<div class="container ">
+    <div class="row ">
+        <div class="col-12">
+            <div class="footer-container">
+                <div class="social-links">
+                    <a class="nav-link" href="https://www.facebook.com/">
+                        <i><img src="img/facebook.jpg" alt="" srcset=""></i> Facebook
+                    </a>
+                    <a class="nav-link" href="https://www.instagram.com/">
+                        <i><img src="img/instagram.jpg" alt=""></i> Instagram
+                    </a>
+                    <a class="nav-link" href="https://web.whatsapp.com/">
+                        <i><img src="img/whatsapp.jpg" alt=""></i> Whatsapp Web
+                    </a>
                 </div>
-    
-                <div class="columna col-4 text-align-center">
-                    <p>Veterinaria la ESPEranza de tu mascota</p>
-                    <img src="img/logo.jpg" alt="" width="100px">
+                <div class="logo">
+                    <strong>Veterinaria la Esperanza de tu mascota</strong>
+                    <br>
+                    <img src="img/Proyecto nuevo.png" alt="" width="100px" class="mb-3 mt-3">
                 </div>
-    
-                <div class="columna col-4">
-                    <p>0999999999</p>
-                    <p>veterinaria@ESPEranza</p>
-                    <p>Santo Domingo-Ecuador</p>
+                <div class="contact-info">
+                  <p>Ecuador</p>
+                  <p>Santo Domingo</p>
+                  <p>+(593) 975 999 999</p>
+                  <p>Barrio: Luz de America</p>
+                  <p>veterinaria@esperanza.com</p>
+                    <div class="separator-line"></div>
                 </div>
             </div>
-            
         </div>
-    </footer>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center">
+            <p class="mb-0">© 2023 Todos los derechos reservados</p>
+        </div>
+    </div>
+</div>
+</footer>
 </body>
 
 </html>

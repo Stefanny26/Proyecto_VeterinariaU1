@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+    <link rel="stylesheet" href="css/servicios.css">
+    <link rel="shortcut icon" href="img/huella.png" type="image/x-icon">
+   
     <style>
         header {
             background: #276955;
@@ -73,26 +75,36 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm">
+        <!--Menu-->
+        <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
-                <a class="navbar-brand" href="#">Veterinaria</a>
-                <button class="navbar-toggler" type="text" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="#container2" style="color: rgb(255, 255, 255);"> <strong>Veterinaria</strong> </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Inicio</a>
+                            <a class="nav-link " href="index.html" target="_blank" id="inicio">
+                              <strong style="color: #ffffff;">Inicio</strong>
+                              </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Servicios.html">Servicios</a>
+                            <a class="nav-link " href="#servicios"  id="servicios">
+                              <strong style="color: #ffffff;">Servicios</strong>
+                              </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Especialidades.html">Especialidades</a>
+                            <a class="nav-link" href="Especialidades.html" target="_blank" id="especialidad">
+                              <strong style="color: #ffffff;">Especialidades</strong>
+                              </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
+                            <a class="nav-link" href="contacto.html" target="_blank" id="contacto">
+                              <strong style="color: #ffffff;">Contacto</strong>
+                              </a>
                         </li>
                     </ul>
                 </div>
@@ -100,7 +112,7 @@
         </nav>
     </header>
     <main>
-        <div class="container">
+        <div class="container" id="servicios">
             <div class="container">
                 <div class="row">
                     <div class="colum ">
@@ -211,7 +223,7 @@
 
 
                                     <div class="row">
-                                        <div class="col-lg-6 col-md-12 col-sm-12">
+                                        <div class="col-lg-6 col-md-12 col-sm-12 mt-3">
 
                                             <div class="card">
                                                 <div class="card-header text-center">
@@ -234,7 +246,7 @@
                                                             <div class="input-group-text" for="validationCustom02">
                                                                 Número de cedula</div>
                                                         </div>
-                                                        <input type="number" min="1" name="" class="form-control"
+                                                        <input type="number" min="0" name="" class="form-control"
                                                             placeholder="Cedula de usuario" id="validationCustom02"
                                                             required>
                                                     </div>
@@ -244,10 +256,12 @@
                                                             <span class="input-group-text" id="basic-addon2"
                                                                 for="validationCustom03">Correo</span>
                                                         </div>
-                                                        <input type="text" class="form-control"
+                                                        <input type="email" class="form-control"
                                                             placeholder="espe@edu.ec" aria-label="Correo"
                                                             aria-describedby="basic-addon2" id="validationCustom03"
                                                             required>
+
+                                                            
                                                     </div>
 
                                                     <div class="input-group mb-3">
@@ -255,7 +269,7 @@
                                                             <span class="input-group-text" id="basic-addon1"
                                                                 for="validationCustom04">Teléfono</span>
                                                         </div>
-                                                        <input type="number" min="1" class="form-control"
+                                                        <input type="number" min="0" class="form-control"
                                                             placeholder="Teléfono de usuario"
                                                             aria-label="Teléfono de usuario"
                                                             aria-describedby="basic-addon1" id="validationCustom04"
@@ -278,7 +292,7 @@
                                             </div>
                                         </div>
                                         <!-- Segundo formulario-->
-                                        <div class="col-lg-6 col-md-12 col-sm-12 ">
+                                        <div class="col-lg-6 col-md-12 col-sm-12 mt-3">
                                             <div class="card">
                                                 <div class="card-header text-center">
                                                     <h5 class="card-title">Datos de la mascota</h5>
@@ -394,32 +408,118 @@
         </div>
     </main>
 
-    <footer class="text-white text-center py-3">
-        <div class="container">
-            <div class="row justify-content-around">
-                <div class="columna col-4">
-                    <a class="nav-link" href="https://www.facebook.com/"><img src="img/facebook.jpg" alt="Facebook"
-                            width="30px">Facebook</a>
-                    <a class="nav-link" href="https://www.instagram.com/"><img src="img/instagram.jpg" alt="Instagram"
-                            width="30px">Instagram</a>
-                    <a class="nav-link" href="https://web.whatsapp.com/"><img src="img/whatsapp.jpg" alt="Whatsapp"
-                            width="30px">Whatsapp</a>
+    <footer class="text-white py-3 mt-5 d-sm-none d-none d-lg-block"> <!--Primer footer-->
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <a class="nav-link" href="https://www.facebook.com/" target="_blank">
+                    <i><img src="img/facebook.jpg" alt="" srcset=""></i>Facebook
+                </a>
+                <a class="nav-link" href="https://www.instagram.com/" target="_blank">
+                  <i><img src="img/instagram.jpg" alt=""></i>Instagram
+                  <a class="nav-link" href="https://web.whatsapp.com/" target="_blank">
+                      <i><img src="img/whatsapp.jpg" alt=""></i>Whatsapp Web
+                  </a>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-12 text-center">
+                <strong class="mb-3">Veterinaria la Esperanza de tu mascota</strong>
+                <img src="img/Proyecto nuevo.png" alt="" width="100px" class="mb-3">
+            </div>
+            <div class="col-md-4 col-sm-12 text-md-end align-items-end">
+                <p>Ecuador</p>
+                <p>Santo Domingo</p>
+                <p>+(593) 975 999 999</p>
+                <p>Barrio: Luz de America</p>
+                <p>veterinaria@esperanza.com</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+          
+            <div class="col-md-12 col-sm-12 text-center">
+                <p class="mb-0">© 2023 Todos los derechos reservados</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<footer class="text-white py-3 mt-5 d-md-block d-none d-sm-none d-lg-none"> <!--Segundo footer-->
+  <div class="container">
+      <div class="row">
+          <div class="col-12 text-center">
+              <a class="nav-link" href="https://www.facebook.com/" target="_blank">
+                  <i><img src="img/facebook.jpg" alt="" srcset=""></i> Facebook
+              </a>
+              
+              
+              <a class="nav-link" href="https://www.instagram.com/" target="_blank">
+                  <i><img src="img/instagram.jpg" alt=""></i> Instagram
+              </a>
+              <a class="nav-link" href="https://web.whatsapp.com/" target="_blank">
+                  <i><img src="img/whatsapp.jpg" alt=""></i> Whatsapp Web
+              </a>
+          </div>
+          <div class="col-12 text-center">
+              <strong class="mb-3 ">Veterinaria la Esperanza de tu mascota <br></strong>
+              <img src="img/Proyecto nuevo.png" alt="" width="100px" class="mb-3 mt-3">
+          </div>
+          <div class="col-12 text-center align-items-end">
+              <p>Ecuador</p>
+              <p>Santo Domingo</p>
+              <p>+(593) 975 999 999</p>
+              <p>Barrio: Luz de America</p>
+              <p>veterinaria@esperanza.com</p>
+              <hr style="background-color: aliceblue;">
+          </div>
+      </div>
+  </div>
+  <div class="container">
+      <div class="row">
+          <div class="col-12 text-center">
+              <p class="mb-0">© 2023 Todos los derechos reservados</p>
+          </div>
+      </div>
+  </div>
+</footer>
+<footer class="text-white py-3 mt-5 d-md-none d-lg-none d-sm-block " >
+<div class="container ">
+    <div class="row ">
+        <div class="col-12">
+            <div class="footer-container">
+                <div class="social-links">
+                    <a class="nav-link" href="https://www.facebook.com/">
+                        <i><img src="img/facebook.jpg" alt="" srcset=""></i> Facebook
+                    </a>
+                    <a class="nav-link" href="https://www.instagram.com/">
+                        <i><img src="img/instagram.jpg" alt=""></i> Instagram
+                    </a>
+                    <a class="nav-link" href="https://web.whatsapp.com/">
+                        <i><img src="img/whatsapp.jpg" alt=""></i> Whatsapp Web
+                    </a>
                 </div>
-
-                <div class="columna col-4 text-align-center">
-                    <p>Veterinaria la ESPEranza de tu mascota</p>
-                    <img src="img/logo.png" alt="" width="100px">
+                <div class="logo">
+                    <strong>Veterinaria la Esperanza de tu mascota</strong>
+                    <br>
+                    <img src="img/Proyecto nuevo.png" alt="" width="100px" class="mb-3 mt-3">
                 </div>
-
-                <div class="columna col-4">
-                    <p>0999999999</p>
-                    <p>veterinaria@ESPEranza</p>
-                    <p>Santo Domingo-Ecuador</p>
+                <div class="contact-info">
+                  <p>Ecuador</p>
+                  <p>Santo Domingo</p>
+                  <p>+(593) 975 999 999</p>
+                  <p>Barrio: Luz de America</p>
+                  <p>veterinaria@esperanza.com</p>
+                    <div class="separator-line"></div>
                 </div>
             </div>
-
         </div>
-    </footer>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center">
+            <p class="mb-0">© 2023 Todos los derechos reservados</p>
+        </div>
+    </div>
+</div>
+</footer>
 </body>
 
 </html>
