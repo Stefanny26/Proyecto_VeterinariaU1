@@ -1,3 +1,22 @@
+/* Estilos base para la imagen */
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  transition: box-shadow 0.3s;
+}
+
+/* Estilos para resaltar la imagen cuando el mouse está encima */
+.carousel-item img:hover {
+  box-shadow: 0 0 22px #15a85f;
+}
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+
 header {
   background-color: #276955; /* Establece el color de fondo del encabezado */
   padding: 10px; /* Agrega un espacio interno de 10px alrededor del encabezado */
@@ -232,4 +251,213 @@ hr.line-fade {
 .img-slide-in{
   animation: slideIn 1s forwards;
   opacity: 0;
+}
+
+
+
+
+
+
+
+
+/* Estilos para el modo oscuro */
+
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+/* Estilos para el efecto hover en los botones de acordeón */
+.accordion-button:hover {
+  color: #0077b6;
+}
+
+/* Cambiar color al pasar el mouse sobre las categorías */
+.categoria:hover {
+  color: rgb(0, 68, 255);
+}
+
+/* Estilos para el botón de modo oscuro */
+#dark-mode-btn {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Estilos para el icono de modo oscuro al pasar el mouse */
+#dark-mode-btn:hover #icon {
+  color: #0077b6; /* Aquí puedes cambiar el color que desees */
+}
+
+/* Estilos para el icono de modo oscuro al tener el foco */
+#dark-mode-btn:focus #icon {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+/* Estilos para eliminar el enfoque en el botón con borde claro */
+.btn-outline-light:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Estilos para eliminar el enfoque en el botón sin borde */
+.btn-outline-light:focus {
+  outline: none;
+}
+
+/* Estilos para centrar contenido verticalmente */
+.center-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos para el botón al pasar el mouse */
+#boton:hover {
+  background-color: rgb(87, 86, 86); /* Cambia el color de fondo cuando el cursor esté sobre el botón */
+  color: white; /* Cambia el color del texto cuando el cursor esté sobre el botón */
+  border: none;
+}
+
+/* Animación para hacer aparecer/desaparecer el texto */
+@keyframes fadeInOut {
+  0% {
+      opacity: 1;
+      transform: scale(1);
+      background-color: #3b3b3b;
+      border: 1px solid #3b3b3b;
+
+  }
+  50% {
+      opacity: 0.5;
+      transform: scale(1.2);
+  }
+  80% {
+      opacity: 0.5;
+      transform: scale(1.3);
+  }
+  100% {
+      opacity: 0.8;
+      transform: scale(1.5);
+      background-color: black;
+      border: 1px solid #3b3b3b;
+  } /* Ajusta el valor de escala según tus preferencias */
+}
+
+/* Aplicar la animación al texto */
+.animate-text {
+  animation: fadeInOut 3s infinite;
+}
+
+/* Estilos personalizados */
+.dropdown-toggle {
+background-color: #4CAF50;
+color: white;
+padding: 10px;
+font-size: 16px;
+border: none;
+cursor: pointer;
+}
+
+.dropdown-menu {
+background-color: #f9f9f9;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-item i {
+margin-right: 10px;
+}
+
+.switch {
+position: relative;
+display: inline-block;
+width: 60px;
+height: 34px;
+}
+
+.switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+.slider {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+border-radius: 34px;
+background-color: #666461;
+transition: .4s;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 26px;
+width: 26px;
+left: 4px;
+bottom: 4px;
+border-radius: 50%;
+background-color: white;
+transition: .4s;
+}
+
+/* Estilo para el interruptor cuando está activado */
+input:checked + .slider {
+background-color: #4c4d4e;
+}
+
+/* Estilo para el círculo deslizante antes del interruptor cuando está activado */
+input:checked + .slider:before {
+transform: translateX(26px);
+}
+
+/* Estilos para el ícono de luna y sol */
+.fa-moon,
+.fa-sun {
+position: absolute;
+top: 50%;
+color: #fff;
+transition: opacity 0.4s;
+transform: translate(-10%, -50%);
+}
+.fa-sun {
+left: 10px;
+opacity: 1;
+}
+.fa-moon {
+right: 10px;
+opacity: 1;
+}
+/* Estilo para el ícono de luna cuando el interruptor está activado */
+.switch input:checked + .slider ~ .fa-moon {
+opacity: 1;
+}
+/* Estilo para el ícono de sol cuando el interruptor no está activado */
+.switch input:not(:checked) + .slider ~ .fa-sun {
+opacity: 1;
+}
+
+
+/* Estilos personalizados */
+.dropdown-toggle {
+background-color: transparent;
+color: white;
+padding: 10px;
+font-size: 16px;
+border: none;
+cursor: pointer;
+}
+.dropdown-menu {
+background-color: #3b3b3b;
+color: #f9f9f9;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  justify-content: center;
+}
+.dropdown-item i {
+margin-right: 5px;
 }
