@@ -418,7 +418,28 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
 <script src="js/jQuery v3.7.0.js"></script>
 
+<script>
+  
+$(window).scroll(function() {
+  var scrollTop = $(document).scrollTop();
+  var scrollHeight = $(document).height();
+  var clientHeight = $(window).height();
 
+  var progress = (scrollTop / (scrollHeight - clientHeight)) * 100;
+  $('#progress-bar').css('width', progress + '%');
+});
+
+
+
+
+$(document).ready(function() {
+  $('#carouselExampleCaptions').carousel({
+    interval: 5000,
+    PaymentRequestUpdateEvent
+    
+  });
+});
+</script>
 
 </body>
 </html>
