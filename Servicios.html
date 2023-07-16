@@ -7,9 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/servicios.css">
-    <link rel="shortcut icon" href="img/huella.png" type="image/x-icon">
-   
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+
+    <script src="js/jQuery v3.7.0.js"></script>
+    <script src="js/jQuery Easing v1.3.js"></script>
+    <!--Libreria-->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+
     <style>
         header {
             background: #276955;
@@ -71,40 +76,172 @@
 
         }
     </style>
+
+
+
+    <script>
+        $(document).ready(function () {
+
+            // Animar la imagen al cargar la página
+            $('#imagen-mascota').animate({ opacity: 0 }, 0)
+                .animate({ opacity: 1 }, 1000, 'easeInOutExpo');
+
+            // Animar la imagen al hacer clic en ella
+            $('#imagen-mascota').click(function () {
+                $(this).animate({ opacity: 0 }, 500, 'easeInOutExpo')
+                    .animate({ opacity: 1 }, 500, 'easeInOutExpo');
+            });
+
+            //--------------------------------------------- Seccion validaciones - Formulario
+
+            // Ocultar el formulario al cargar la página
+            $('#formulario').hide();
+            // Evento de cambio en el radio de opciones de consulta
+            $('input[name="cita"]').change(function () {
+                var selectedOption = $(this).attr('id');
+
+                if (selectedOption === 'radioPersonalizado3' || selectedOption === 'radioPersonalizado4') {
+                    // Mostrar el formulario si se selecciona una de las opciones de consulta
+                    $('#formulario').show();
+                } else {
+                    // Ocultar el formulario si no se selecciona ninguna opción de consulta
+                    $('#formulario').hide();
+                }
+            });
+
+            $('#formValidar').validate({
+
+                errorElement: 'div',
+                errorPlacement: function (error, element) {
+                    error.addClass('invalid-feedback');
+                    element.closest('.input-group').append(error);
+                },
+                highlight: function (element) {
+                    $(element).addClass('is-invalid');
+                },
+                unhighlight: function (element) {
+                    $(element).removeClass('is-invalid');
+                },
+                rules: {
+                    nombre: {
+                        required: true,
+                    },
+                    cedula: {
+                        required: true,
+                        digits: true,
+                    },
+                    email: {
+                        required: true,
+                        email: true,
+                    },
+                    telefono: {
+                        required: true,
+                        digits: true,
+                    },
+                    direccion: {
+                        required: {
+                            depends: function (element) {
+                                return $('#radioPersonalizado3').is(':not(:checked)');
+                            }
+                        },
+                    },
+                    nomMascota: {
+                        required: true,
+                    },
+                    edad: {
+                        required: true,
+                        digits: true,
+                    },
+                    raza: {
+                        required: true,
+                    },
+                    color: {
+                        required: true,
+                    },
+                    sexo: {
+                        required: true,
+                    },
+                    // Resto de los campos del formulario...
+                },
+                messages: {
+                    nombre: {
+                        required: 'Por favor, ingresa tu nombre.',
+                    },
+                    cedula: {
+                        required: 'Por favor, ingresa tu número de cédula.',
+                        digits: 'Por favor, ingresa solo dígitos.',
+                    },
+                    email: {
+                        required: 'Por favor, ingresa tu correo electrónico.',
+                        email: 'Por favor, ingresa un correo electrónico válido.',
+                    },
+                    telefono: {
+                        required: 'Por favor, ingresa tu número de teléfono.',
+                        digits: 'Por favor, ingresa solo dígitos.',
+                    },
+                    direccion: {
+                        required: 'Por favor, ingresa tu dirección.',
+                    },
+                    nomMascota: {
+                        required: 'Por favor, ingresa el nombre de tu mascota.',
+                    },
+                    edad: 'Por favor, ingresa la edad de tu mascota',
+                    color: 'Por favor, ingresa el color de tu mascota',
+                    sinto: 'Por favor, ingresa los sintomas de tu mascota',
+                    raza: 'Por favor, ingresa la raza de tu mascota',
+                    sexo: ''
+                    // Resto de los campos del formulario...
+                },
+                submitHandler: function (form) {
+                    // Aquí puedes agregar el código para enviar el formulario si todas las validaciones son exitosas
+                    form.submit();
+                }
+            });
+
+            $('#radioPersonalizado3').change(function () {
+                var direccionInput = $('input[name="direccion"]');
+                if ($(this).is(':checked')) {
+                    direccionInput.prop('readonly', true);
+                    direccionInput.val('');
+                } else {
+                    direccionInput.prop('readonly', false);
+                }
+            });
+            $('#radioPersonalizado4').change(function () {
+                var direccionInput = $('input[name="direccion"]');
+                if ($(this).is(':checked')) {
+
+                    direccionInput.prop('readonly', false);
+                }
+            });
+        });
+    </script>
+
+
 </head>
 
 <body>
     <header>
-        <!--Menu-->
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm">
             <div class="container">
-                <a class="navbar-brand" href="#container2" style="color: rgb(255, 255, 255);"> <strong>Veterinaria</strong> </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <a class="navbar-brand" href="#">Veterinaria</a>
+                <button class="navbar-toggler" type="text" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link " href="index.html" id="inicio">
-                              <strong style="color: #ffffff;">Inicio</strong>
-                              </a>
+                            <a class="nav-link" href="index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="#"  id="servicios">
-                              <strong style="color: #ffffff;">Servicios</strong>
-                              </a>
+                            <a class="nav-link" href="Servicios.html">Servicios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Especialidades.html"  id="especialidad">
-                              <strong style="color: #ffffff;">Especialidades</strong>
-                              </a>
+                            <a class="nav-link" href="Especialidades.html">Especialidades</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contacto.html"  id="contacto">
-                              <strong style="color: #ffffff;">Contacto</strong>
-                              </a>
+                            <a class="nav-link" href="contacto.html">Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -112,30 +249,24 @@
         </nav>
     </header>
     <main>
-        <div class="container" id="">
+        <div class="container">
             <div class="container">
                 <div class="row">
                     <div class="colum ">
-                        <div class="encabezado mt-3 ">
+                        <div class="encabezado mt-3">
                             <h3>Adopción</h3>
                         </div>
                         <div class="row mt-3">
-                            <div class="col-md-5 col-lg-5 col-sm-12 servicios12">
+                            <div class="col-md-5 col-lg-5 col-sm-12">
                                 <div class="card mb-3" style="max-width: 540px;">
                                     <div class="row g-0">
                                         <div class="col-md-12">
-                                            <img src="img/Adopcion-mascotas.jpg" class="img-thumbnail  card-img-top "
-                                                alt="adopcion" style="width:200%">
+                                            <img id="imagen-mascota" src="img/Adopcion-mascotas.jpg" class="img-thumbnail card-img-top" alt="adopcion" style="width:200%">
                                         </div>
                                         <div class="col-md-12">
                                             <div class="card-body">
                                                 <br>
-                                                <p class="card-text">Este trámite esta designado para todas aquellas
-                                                    personas que requieran una mascota de compañía, ya sean rescatados,
-                                                    abandonados y/o dejados al cuidado del albergue canino municipal y
-                                                    sus técnicos . El usuario debe visitar el albergue y escoger la
-                                                    mascota, el técnico verifica el lugar de destino del adoptado,
-                                                    posteriormente llenar un acta de adopción.</p>
+                                                <p class="card-text">Este trámite está designado para todas aquellas personas que requieran una mascota de compañía, ya sean rescatados, abandonados y/o dejados al cuidado del albergue canino municipal y sus técnicos. El usuario debe visitar el albergue y escoger la mascota, el técnico verifica el lugar de destino del adoptado, posteriormente llenar un acta de adopción.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -180,16 +311,11 @@
                                 </div>
 
                             </div>
-
-
                         </div>
-
-
-
 
                         <div class="row mt-3">
                             <div class="col-12 ">
-                                <form action="">
+                                <form name="formValidar" id="formValidar" action="post">
 
                                     <div class="col-12 mt-3">
                                         <div class="card text-dark bg-white mb-3 text-center">
@@ -221,9 +347,8 @@
                                         </div>
                                     </div>
 
-
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-12 col-sm-12 mt-3">
+                                    <div class="row" id="formulario" style="display: none;">
+                                        <div class="col-lg-6 col-md-12 col-sm-12">
 
                                             <div class="card">
                                                 <div class="card-header text-center">
@@ -236,7 +361,7 @@
                                                             <div class="input-group-text" for="validationCustom01">
                                                                 Nombre</div>
                                                         </div>
-                                                        <input type="text" name="" class="form-control"
+                                                        <input type="text" name="nombre" class="form-control"
                                                             placeholder="Nombre de usuario" id="validationCustom01"
                                                             required>
                                                     </div>
@@ -246,7 +371,7 @@
                                                             <div class="input-group-text" for="validationCustom02">
                                                                 Número de cedula</div>
                                                         </div>
-                                                        <input type="number" min="0" name="" class="form-control"
+                                                        <input type="number" min="1" name="cedula" class="form-control"
                                                             placeholder="Cedula de usuario" id="validationCustom02"
                                                             required>
                                                     </div>
@@ -256,12 +381,10 @@
                                                             <span class="input-group-text" id="basic-addon2"
                                                                 for="validationCustom03">Correo</span>
                                                         </div>
-                                                        <input type="email" class="form-control"
+                                                        <input type="text" class="form-control" name="email"
                                                             placeholder="espe@edu.ec" aria-label="Correo"
                                                             aria-describedby="basic-addon2" id="validationCustom03"
                                                             required>
-
-                                                            
                                                     </div>
 
                                                     <div class="input-group mb-3">
@@ -269,11 +392,10 @@
                                                             <span class="input-group-text" id="basic-addon1"
                                                                 for="validationCustom04">Teléfono</span>
                                                         </div>
-                                                        <input type="number" min="0" class="form-control"
+                                                        <input type="number" min="1" class="form-control"
                                                             placeholder="Teléfono de usuario"
                                                             aria-label="Teléfono de usuario"
-                                                            aria-describedby="basic-addon1" id="validationCustom04"
-                                                            required>
+                                                            aria-describedby="basic-addon1" name="telefono" required>
                                                     </div>
 
                                                     <div class="input-group mb-3">
@@ -284,15 +406,14 @@
                                                         <input type="text" class="form-control"
                                                             placeholder="Dirección de usuario del destinatario"
                                                             aria-label="Dirección de usuario del destinatario"
-                                                            aria-describedby="basic-addon2" id="validationCustom05"
-                                                            required>
+                                                            aria-describedby="basic-addon2" name="direccion" required>
                                                     </div>
                                                     </p>
                                                 </div>
                                             </div>
                                         </div>
                                         <!-- Segundo formulario-->
-                                        <div class="col-lg-6 col-md-12 col-sm-12 mt-3">
+                                        <div class="col-lg-6 col-md-12 col-sm-12 ">
                                             <div class="card">
                                                 <div class="card-header text-center">
                                                     <h5 class="card-title">Datos de la mascota</h5>
@@ -304,7 +425,7 @@
                                                             <div class="input-group-text" for="validationCustom06">
                                                                 Nombre</div>
                                                         </div>
-                                                        <input type="text" name="" class="form-control"
+                                                        <input type="text" name="nomMascota" class="form-control"
                                                             placeholder="Nombre de mascota" id="validationCustom06"
                                                             required>
                                                     </div>
@@ -316,7 +437,7 @@
                                                                         for="validationCustom07">Edad</span>
                                                                 </div>
                                                                 <input type="number" min="1" class="form-control"
-                                                                    placeholder="Edad de la mascota"
+                                                                    name="edad" placeholder="Edad de la mascota"
                                                                     aria-label="Edad de la mascota"
                                                                     aria-describedby="basic-addon1"
                                                                     id="validationCustom07" required>
@@ -329,7 +450,7 @@
                                                                     <span class="input-group-text" id="basic-addon1"
                                                                         for="validationCustom08">Raza</span>
                                                                 </div>
-                                                                <input type="text" class="form-control"
+                                                                <input type="text" class="form-control" name="raza"
                                                                     placeholder="Raza de la mascota"
                                                                     aria-label="Raza de la mascota"
                                                                     aria-describedby="basic-addon1"
@@ -345,7 +466,7 @@
                                                                     <span class="input-group-text" id="basic-addon1"
                                                                         for="validationCustom09">Color</span>
                                                                 </div>
-                                                                <input type="text" class="form-control"
+                                                                <input type="text" class="form-control" name="color"
                                                                     placeholder="Color de la mascota"
                                                                     aria-label="Color de la mascota"
                                                                     aria-describedby="basic-addon1"
@@ -360,12 +481,11 @@
                                                                     <label class="input-group-text "
                                                                         for="validationCustom10">Sexo</label>
                                                                 </div>
-                                                                <select name="" class="custom-select  "
+                                                                <select name="sexo" class="custom-select  "
                                                                     id="validationCustom10" required>
-                                                                    <option selected>Elija una opción</option>
+                                                                    <option selected disabled>Elija una opción</option>
                                                                     <option value="1">Macho</option>
                                                                     <option value="2">Hembra</option>
-
                                                                 </select>
                                                             </div>
 
@@ -378,25 +498,30 @@
                                                                 for="validationCustom11">Síntomas</span>
                                                         </div>
                                                         <textarea class="form-control" aria-label="With textarea"
-                                                            id="validationCustom10" required></textarea>
+                                                            name="sinto" id="validationCustom10" required></textarea>
                                                     </div>
                                                     </p>
                                                 </div>
                                                 </p>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-12 text-center mt-3">
-                                        <div class="custom-control custom-checkbox ">
-                                            <input type="checkbox" name="" id="checkboxPersonalizado1" required
-                                                class="custom-control-input">
-                                            <label for="checkboxPersonalizado1" class="custom-control-label">Acepto
-                                                terminos y
-                                                condiciones</label>
+                                        <div class="col-12">
+                                            <div class="col-12 text-center mt-3">
+                                                <div class="custom-control custom-checkbox ">
+                                                    <input type="checkbox" name="terminos" id="checkboxPersonalizado1"
+                                                        required class="custom-control-input">
+                                                    <label for="checkboxPersonalizado1"
+                                                        class="custom-control-label">Acepto
+                                                        terminos y
+                                                        condiciones</label>
+                                                </div>
+                                                <button class="btn btn-info mt-3" type="submit"
+                                                    href="Servicios.html">Enviar
+                                                    formulario</button></p>
+                                            </div>
                                         </div>
-                                        <button class="btn btn-info mt-3" type="submit" href="Servicios.html">Enviar
-                                            formulario</button></p>
                                     </div>
+
                                 </form>
                             </div>
                         </div>
@@ -408,118 +533,32 @@
         </div>
     </main>
 
-    <footer class="text-white py-3 mt-5 d-sm-none d-none d-lg-block"> <!--Primer footer-->
-        <div class="row">
-            <div class="col-md-4 col-sm-12">
-                <a class="nav-link" href="https://www.facebook.com/" target="_blank">
-                    <i><img src="img/facebook.jpg" alt="" srcset=""></i>Facebook
-                </a>
-                <a class="nav-link" href="https://www.instagram.com/" target="_blank">
-                  <i><img src="img/instagram.jpg" alt=""></i>Instagram
-                  <a class="nav-link" href="https://web.whatsapp.com/" target="_blank">
-                      <i><img src="img/whatsapp.jpg" alt=""></i>Whatsapp Web
-                  </a>
-              </a>
-            </div>
-            <div class="col-md-4 col-sm-12 text-center">
-                <strong class="mb-3">Veterinaria la Esperanza de tu mascota</strong>
-                <img src="img/Proyecto nuevo.png" alt="" width="100px" class="mb-3">
-            </div>
-            <div class="col-md-4 col-sm-12 text-md-end align-items-end">
-                <p>Ecuador</p>
-                <p>Santo Domingo</p>
-                <p>+(593) 975 999 999</p>
-                <p>Barrio: Luz de America</p>
-                <p>veterinaria@esperanza.com</p>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-          
-            <div class="col-md-12 col-sm-12 text-center">
-                <p class="mb-0">© 2023 Todos los derechos reservados</p>
-            </div>
-        </div>
-    </div>
-</footer>
-<footer class="text-white py-3 mt-5 d-md-block d-none d-sm-none d-lg-none"> <!--Segundo footer-->
-  <div class="container">
-      <div class="row">
-          <div class="col-12 text-center">
-              <a class="nav-link" href="https://www.facebook.com/" target="_blank">
-                  <i><img src="img/facebook.jpg" alt="" srcset=""></i> Facebook
-              </a>
-              
-              
-              <a class="nav-link" href="https://www.instagram.com/" target="_blank">
-                  <i><img src="img/instagram.jpg" alt=""></i> Instagram
-              </a>
-              <a class="nav-link" href="https://web.whatsapp.com/" target="_blank">
-                  <i><img src="img/whatsapp.jpg" alt=""></i> Whatsapp Web
-              </a>
-          </div>
-          <div class="col-12 text-center">
-              <strong class="mb-3 ">Veterinaria la Esperanza de tu mascota <br></strong>
-              <img src="img/Proyecto nuevo.png" alt="" width="100px" class="mb-3 mt-3">
-          </div>
-          <div class="col-12 text-center align-items-end">
-              <p>Ecuador</p>
-              <p>Santo Domingo</p>
-              <p>+(593) 975 999 999</p>
-              <p>Barrio: Luz de America</p>
-              <p>veterinaria@esperanza.com</p>
-              <hr style="background-color: aliceblue;">
-          </div>
-      </div>
-  </div>
-  <div class="container">
-      <div class="row">
-          <div class="col-12 text-center">
-              <p class="mb-0">© 2023 Todos los derechos reservados</p>
-          </div>
-      </div>
-  </div>
-</footer>
-<footer class="text-white py-3 mt-5 d-md-none d-lg-none d-sm-block " >
-<div class="container ">
-    <div class="row ">
-        <div class="col-12">
-            <div class="footer-container">
-                <div class="social-links">
-                    <a class="nav-link" href="https://www.facebook.com/">
-                        <i><img src="img/facebook.jpg" alt="" srcset=""></i> Facebook
-                    </a>
-                    <a class="nav-link" href="https://www.instagram.com/">
-                        <i><img src="img/instagram.jpg" alt=""></i> Instagram
-                    </a>
-                    <a class="nav-link" href="https://web.whatsapp.com/">
-                        <i><img src="img/whatsapp.jpg" alt=""></i> Whatsapp Web
-                    </a>
+    <footer class="text-white text-center py-3">
+        <div class="container">
+            <div class="row justify-content-around">
+                <div class="columna col-4">
+                    <a class="nav-link" href="https://www.facebook.com/"><img src="img/facebook.jpg" alt="Facebook"
+                            width="30px">Facebook</a>
+                    <a class="nav-link" href="https://www.instagram.com/"><img src="img/instagram.jpg" alt="Instagram"
+                            width="30px">Instagram</a>
+                    <a class="nav-link" href="https://web.whatsapp.com/"><img src="img/whatsapp.jpg" alt="Whatsapp"
+                            width="30px">Whatsapp</a>
                 </div>
-                <div class="logo">
-                    <strong>Veterinaria la Esperanza de tu mascota</strong>
-                    <br>
-                    <img src="img/Proyecto nuevo.png" alt="" width="100px" class="mb-3 mt-3">
+
+                <div class="columna col-4 text-align-center">
+                    <p>Veterinaria la ESPEranza de tu mascota</p>
+                    <img src="img/logo.png" alt="" width="100px">
                 </div>
-                <div class="contact-info">
-                  <p>Ecuador</p>
-                  <p>Santo Domingo</p>
-                  <p>+(593) 975 999 999</p>
-                  <p>Barrio: Luz de America</p>
-                  <p>veterinaria@esperanza.com</p>
-                    <div class="separator-line"></div>
+
+                <div class="columna col-4">
+                    <p>0999999999</p>
+                    <p>veterinaria@ESPEranza</p>
+                    <p>Santo Domingo-Ecuador</p>
                 </div>
             </div>
+
         </div>
-    </div>
-    <div class="row">
-        <div class="col-12 text-center">
-            <p class="mb-0">© 2023 Todos los derechos reservados</p>
-        </div>
-    </div>
-</div>
-</footer>
+    </footer>
 </body>
 
 </html>
