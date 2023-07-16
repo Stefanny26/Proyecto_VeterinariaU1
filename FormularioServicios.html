@@ -129,12 +129,10 @@
                 }
 
                 return parseInt(cedula.charAt(9)) === digitoVerificador;
-            }, "");
+            }, "Ingrese una cédula válida");
 
-            
         });
 
-       
     </script>
 
     <style>
@@ -206,7 +204,6 @@
         }
 
         /* Estilos para mostrar las alertas de Bootstrap */
-
         .invalid-feedback {
             color: red;
             font-size: 13px;
@@ -422,14 +419,14 @@
                             <div class="col-12 text-center mt-3">
                                 <div class="custom-control custom-checkbox ">
 
-                                        <input type="checkbox" onChange="cambiarCondiciones()" id="condiciones"  name="condiciones"/> Acepto terminos y
-                                        condiciones <br/>
+                                    <input type="checkbox" /> Acepto terminos y condiciones <br />
                                     <div class="invalid-feedback">
                                         Marque una opción
                                     </div>
-
                                 </div>
-                                <input id="enviar" disabled class="botons" type="submit" value="Enviar"></p>
+                                <button class="btn btn-info mt-3" type="submit">  Enviar formulario
+                                </button></p>
+                        </div>
                             </div>
 
                         </form>
@@ -467,12 +464,6 @@
 
         </div>
     </footer>
-<script>
-    const tyc = document.getElementById("condiciones");
-    const enviar = document.getElementById("enviar");
-
-    const cambiarCondiciones = () => tyc.checked ? enviar.disabled = false : enviar.disabled = true
-</script>
 
 </body>
 
