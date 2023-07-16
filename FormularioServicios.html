@@ -7,8 +7,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulafio de Adopcion</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/inicio.css">
-    <link rel="shortcut icon" href="img/huella.png" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+
+    <script src="js/jQuery v3.7.0.js"></script>
+    <script src="js/jQuery Easing v1.3.js"></script>
+
+    <!--Libreria-->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $("#formValidar").validate({
+
+                rules: {
+                    nombre: {
+                        minlength: 3
+                    },
+                    direccion: {
+                        minlength: 3
+                    },
+
+                    email: {
+                        email: true
+                    },
+                    telefono: {
+                        number: true,
+                        minlength: 10,
+                        maxlength: 10
+                    },
+                    ocupacion: {
+                        minlength: 3,
+                        required: true
+                    },
+                    cedula: {
+                        required: true,
+                        cedulaEcuatoriana: true,
+                        minlength: 10,
+                        maxlength: 10
+                    },
+                    numPersonas: {
+                        number: true
+                    },
+                    mascota: {
+                        required: true
+                    },
+                    domicilio: {
+                        required: true
+                    },
+                    mensaje: {
+                        required: true
+                    }
+                },
+
+                messages: {
+                    nombre: {
+                        required: "",
+                        minlength: ""
+                    },
+                    cedula: {
+                        required: "",
+                        minlength: ""
+                    },
+                    direccion: {
+                        required: "",
+                        minlength: ""
+                    },
+                    email: "",
+                    telefono: {
+                        required: "",
+                        minlength: ""
+                    },
+                    numPersonas: "",
+                    ocupacion: "",
+                    domicilio: "",
+                    mensaje: "",
+                    condiciones: "Marque la opción",
+                    mascota: "Seleccione una opción"
+                },
+
+                highlight: function (element) {
+                    // Agregar clases de Bootstrap al campo de entrada con error
+                    $(element).addClass("is-invalid");
+                },
+                unhighlight: function (element) {
+                    // Eliminar clases de Bootstrap del campo de entrada cuando se resuelve el error
+                    $(element).removeClass("is-invalid");
+                },
+                errorElement: "span",
+                errorPlacement: function (error, element) {
+                    // Mostrar el mensaje de error debajo del campo de entrada
+                    error.addClass("error-message");
+                    error.insertAfter(element);
+                },
+
+                submitHandler: function (form) {
+                    form.submit();
+                }
+            });
+
+            $.validator.addMethod("cedulaEcuatoriana", function (value, element) {
+                // Validar la cédula ecuatoriana
+                var cedula = value.trim();
+                if (cedula.length !== 10) {
+                    return false;
+                }
+
+                var coeficientes = [2, 1, 2, 1, 2, 1, 2, 1, 2];
+                var total = 0;
+
+                for (var i = 0; i < coeficientes.length; i++) {
+                    var producto = coeficientes[i] * parseInt(cedula.charAt(i));
+                    total += producto >= 10 ? producto - 9 : producto;
+                }
+
+                var digitoVerificador = 10 - (total % 10);
+                if (digitoVerificador === 10) {
+                    digitoVerificador = 0;
+                }
+
+                return parseInt(cedula.charAt(9)) === digitoVerificador;
+            }, "");
+
+            
+        });
+
+       
+    </script>
+
     <style>
         header {
             background: #276955;
@@ -76,41 +204,39 @@
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             font-size: 20px;
         }
+
+        /* Estilos para mostrar las alertas de Bootstrap */
+
+        .invalid-feedback {
+            color: red;
+            font-size: 13px;
+            margin-top: 5px;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <!--Menu-->
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg ">
             <div class="container">
-                <a class="navbar-brand" href="#container2" style="color: rgb(255, 255, 255);"> <strong>Veterinaria</strong> </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <a class="navbar-brand" href="#">Veterinaria</a>
+                <button class="navbar-toggler" type="text" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link " href="index.html"  id="inicio">
-                              <strong>Inicio</strong>
-                              </a>
+                            <a class="nav-link" href="index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="Servicios.html"  id="servicios">
-                              <strong>Servicios</strong>
-                              </a>
+                            <a class="nav-link" href="Servicios.html">Servicios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Especialidades.html" id="especialidad">
-                              <strong>Especialidades</strong>
-                              </a>
+                            <a class="nav-link" href="Especialidades.html">Especialidades</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contacto.html"  id="contacto">
-                              <strong>Contacto</strong>
-                              </a>
+                            <a class="nav-link" href="contacto.html">Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -118,14 +244,14 @@
         </nav>
     </header>
     <main>
-        <div class="container container2" id="formulario">
+        <div class="container container2">
             <div class=" row">
-                <div class="col-12 mt-3">
+                <div class="col-12 mt-2">
                     <div class="encabezado">
                         <h3>Solicitud de Adopcion</h3>
                     </div>
                     <div class="col-12 ">
-                        <form action="" class="needs-validation">
+                        <form action="" name="formValidar" id="formValidar" class="needs-validation" novalidate>
                             <div class="card">
                                 <div class="card-header ">
                                     <h5 class="card-title">Datos Personales</h5>
@@ -137,31 +263,41 @@
                                             <div class="form-group">
                                                 <div class="input-group mb-3">
                                                     <div class="input-group-prepend">
-                                                        <div class="input-group-text" for="validationCustom01">Nombre
+                                                        <div class="input-group-text">Nombre
                                                         </div>
+
                                                     </div>
-                                                    <input type="text" class="form-control"
-                                                        placeholder="Nombre de usuario" id="validationCustom01"
-                                                        required>
+                                                    <input type="text" class=" form-control" name="nombre"
+                                                        placeholder="Nombre de usuario" required minlength="3">
+                                                    <div class="invalid-feedback">
+                                                        Ingrese su nombre, debe tener como min 3 caracteres
+                                                    </div>
                                                 </div>
 
                                                 <div class="input-group mb-3">
                                                     <div class="input-group-prepend">
-                                                        <div class="input-group-text" for="validationDefault02">Número
+                                                        <div class="input-group-text">Número
                                                             de cedula</div>
                                                     </div>
-                                                    <input type="number" min="0" class="form-control"
-                                                        id="validationCustom02" required
-                                                        placeholder="Cédula de usuario">
+                                                    <input type="number" min="1" class="form-control" name="cedula"
+                                                        required placeholder="Cédula de usuario">
+                                                    <div class="invalid-feedback">
+                                                        Ingrese el número de cédula, debe contener 10 dígitos
+                                                        (Ecuatoriana)
+                                                    </div>
                                                 </div>
 
                                                 <div class="input-group mb-3">
                                                     <div class="input-group-prepend">
-                                                        <div class="input-group-text" for="validationDefault03">Correo
+                                                        <div class="input-group-text">Correo
                                                         </div>
                                                     </div>
-                                                    <input type="text" class="form-control" id="validationCustom03"
-                                                        required placeholder="espe@edu.ec">
+                                                    <input type="text" class="form-control" name="email" required
+                                                        placeholder="espe@edu.ec">
+                                                    <div class="invalid-feedback">
+                                                        Ingrese su correo electronico
+
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -171,56 +307,42 @@
                                             <div class="form-group">
                                                 <div class="input-group mb-3">
                                                     <div class="input-group-prepend">
-                                                        <div class="input-group-text" for="validationDefault04">Teléfono
+                                                        <div class="input-group-text">Teléfono
                                                         </div>
                                                     </div>
-                                                    <input type="number" min="0" class="form-control"
-                                                        id="validationCustom04" required
-                                                        placeholder="Teléfono de usuario">
+                                                    <input type="number" min="1" class="form-control" name="telefono"
+                                                        required placeholder="Teléfono de usuario">
+                                                    <div class="invalid-feedback">
+                                                        Ingrese el número de telefonico, debe contener 10 dígitos
+                                                    </div>
                                                 </div>
 
                                                 <div class="input-group mb-3">
                                                     <div class="input-group-prepend">
-                                                        <div class="input-group-text" for="validationDefault05">
+                                                        <div class="input-group-text">
                                                             Dirección</div>
                                                     </div>
-                                                    <input type="text" id="validationCustom05" required
-                                                        class="form-control"
+                                                    <input type="text" name="direccion" required class="form-control"
                                                         placeholder="Dirección de usuario del destinatario">
+                                                    <div class="invalid-feedback">
+                                                        Ingrese su dirección debe tener como min 3 caracteres
+                                                    </div>
                                                 </div>
+
                                                 <div class="input-group mb-3">
                                                     <div class="input-group-prepend">
-                                                        <div class="input-group-text " for="validationDefault06">
+                                                        <div class="input-group-text ">
                                                             Ocupación</div>
                                                     </div>
-                                                    <input type="text" id="validationCustom06" class="form-control"
+                                                    <input type="text" name="ocupacion" class="form-control"
                                                         placeholder="Ocupación del usuario">
+                                                    <div class="invalid-feedback">
+                                                        Ingrese su ocupación debe tener como min 3 caracteres
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-12 col-md-12 col-xl-12">
-                                            <hr>
-                                            <div class="row">
-                                                <div class="col1 col-6 mt-3">
-                                                    <p>Me interesa adoptar </p>
-                                                </div>
-                                                <div class=" col-6 mt-3">
-                                                    <div class="custom-control custom-radio ">
-                                                        <input type="radio" name="mascota" id="radioPersonalizado3"
-                                                            class="custom-control-input">
-                                                        <label for="radioPersonalizado3"
-                                                            class="custom-control-label">Canino</label>
-                                                    </div>
 
-                                                    <div class="custom-control custom-radio ">
-                                                        <input type="radio" name="mascota" id="radioPersonalizado4"
-                                                            class="custom-control-input">
-                                                        <label for="radioPersonalizado4"
-                                                            class="custom-control-label">Felino</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                     </p>
                                 </div>
@@ -236,11 +358,16 @@
                                         <div class="col-sm-12 col-md-12 col-xl-6">
                                             <div class="form-group">
                                                 <div class="input-group mb-3">
-                                                    <div class="input-group-prepend mr-3 " for="validationCustom04">
-                                                        <p>Personas que vivan con usted</p>
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text">Personas que vivan con usted
+                                                        </div>
                                                     </div>
-                                                    <input type="number" class="form-control" id="validationCustom04"
-                                                        min="0" required>
+                                                    <input type="number" min="1" class="form-control" name="numPersonas"
+                                                        required>
+
+                                                    <div class="invalid-feedback">
+                                                        Ingrese el dato solicitado
+                                                    </div>
                                                 </div>
 
                                             </div>
@@ -249,20 +376,22 @@
                                         <div class="col-sm-12 col-md-12 col-xl-6">
                                             <div class="row">
                                                 <div class="col1 col-sm-12 col-md-12 col-xl-6">
-                                                    <label for="validationCustom04" class="form-label">Tipo de
+                                                    <label class="form-label">Tipo de
                                                         inmueble</label>
                                                 </div>
-                                                <div class=" col-sm-12 col-md-12 col-xl-6">
-
-                                                    <select name="" class="custom-select custom-select-md mb-3"
-                                                        id="validationCustom04 "  required>
-                                                        <option selected>Elija una opción</option>
-                                                        <option value="1">Casa propia</option>
-                                                        <option value="2">Departamento</option>
-                                                        <option value="3">Quinta</option>
-                                                        <option value="4">Finca</option>
+                                                <div class="col-sm-12 col-md-12 col-xl-6">
+                                                    <select name="domicilio"
+                                                        class="form-select custom-select custom-select-md"
+                                                        id="validationCustom04" required>
+                                                        <option selected disabled value="">Elija una opción</option>
+                                                        <option>Casa propia</option>
+                                                        <option>Departamento</option>
+                                                        <option>Quinta</option>
+                                                        <option>Finca</option>
                                                     </select>
-
+                                                    <div class="invalid-feedback">
+                                                        Seleccione una opción
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -278,10 +407,12 @@
                                 <div class="card-body">
                                     <p class="card-text">
 
-                                    <div class="form-group" for="validationCustom08">
+                                    <div class="form-group">
                                         ¿Por que desea adoptar?
-                                        <textarea name="mensaje" id="validationCustom08" cols="10" rows="3"
-                                            class="form-control"></textarea>
+                                        <textarea name="mensaje" cols="10" rows="3" class="form-control"></textarea>
+                                        <div class="invalid-feedback">
+                                            Completar!
+                                        </div>
                                     </div>
                                     </p>
                                 </div>
@@ -290,13 +421,15 @@
 
                             <div class="col-12 text-center mt-3">
                                 <div class="custom-control custom-checkbox ">
-                                    <input type="checkbox" name="" id="checkboxPersonalizado1" required
-                                        class="custom-control-input">
-                                    <label for="checkboxPersonalizado1" class="custom-control-label">Acepto terminos y
-                                        condiciones</label>
+
+                                        <input type="checkbox" onChange="cambiarCondiciones()" id="condiciones"  name="condiciones"/> Acepto terminos y
+                                        condiciones <br/>
+                                    <div class="invalid-feedback">
+                                        Marque una opción
+                                    </div>
+
                                 </div>
-                                <button class="btn btn-info mt-3" type="submit" href="Servicios.html">Enviar
-                                    formulario</button></p>
+                                <input id="enviar" disabled class="botons" type="submit" value="Enviar"></p>
                             </div>
 
                         </form>
@@ -308,118 +441,39 @@
         </div>
     </main>
 
-    <footer class="text-white py-3 mt-5 d-sm-none d-none d-lg-block"> <!--Primer footer-->
-        <div class="row">
-            <div class="col-md-4 col-sm-12">
-                <a class="nav-link" href="https://www.facebook.com/" target="_blank">
-                    <i><img src="img/facebook.jpg" alt="" srcset=""></i>Facebook
-                </a>
-                <a class="nav-link" href="https://www.instagram.com/" target="_blank">
-                  <i><img src="img/instagram.jpg" alt=""></i>Instagram
-                  <a class="nav-link" href="https://web.whatsapp.com/" target="_blank">
-                      <i><img src="img/whatsapp.jpg" alt=""></i>Whatsapp Web
-                  </a>
-              </a>
-            </div>
-            <div class="col-md-4 col-sm-12 text-center">
-                <strong class="mb-3">Veterinaria la Esperanza de tu mascota</strong>
-                <img src="img/Proyecto nuevo.png" alt="" width="100px" class="mb-3">
-            </div>
-            <div class="col-md-4 col-sm-12 text-md-end align-items-end">
-                <p>Ecuador</p>
-                <p>Santo Domingo</p>
-                <p>+(593) 975 999 999</p>
-                <p>Barrio: Luz de America</p>
-                <p>veterinaria@esperanza.com</p>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-          
-            <div class="col-md-12 col-sm-12 text-center">
-                <p class="mb-0">© 2023 Todos los derechos reservados</p>
-            </div>
-        </div>
-    </div>
-</footer>
-<footer class="text-white py-3 mt-5 d-md-block d-none d-sm-none d-lg-none"> <!--Segundo footer-->
-  <div class="container">
-      <div class="row">
-          <div class="col-12 text-center">
-              <a class="nav-link" href="https://www.facebook.com/" target="_blank">
-                  <i><img src="img/facebook.jpg" alt="" srcset=""></i> Facebook
-              </a>
-              
-              
-              <a class="nav-link" href="https://www.instagram.com/" target="_blank">
-                  <i><img src="img/instagram.jpg" alt=""></i> Instagram
-              </a>
-              <a class="nav-link" href="https://web.whatsapp.com/" target="_blank">
-                  <i><img src="img/whatsapp.jpg" alt=""></i> Whatsapp Web
-              </a>
-          </div>
-          <div class="col-12 text-center">
-              <strong class="mb-3 ">Veterinaria la Esperanza de tu mascota <br></strong>
-              <img src="img/Proyecto nuevo.png" alt="" width="100px" class="mb-3 mt-3">
-          </div>
-          <div class="col-12 text-center align-items-end">
-              <p>Ecuador</p>
-              <p>Santo Domingo</p>
-              <p>+(593) 975 999 999</p>
-              <p>Barrio: Luz de America</p>
-              <p>veterinaria@esperanza.com</p>
-              <hr style="background-color: aliceblue;">
-          </div>
-      </div>
-  </div>
-  <div class="container">
-      <div class="row">
-          <div class="col-12 text-center">
-              <p class="mb-0">© 2023 Todos los derechos reservados</p>
-          </div>
-      </div>
-  </div>
-</footer>
-<footer class="text-white py-3 mt-5 d-md-none d-lg-none d-sm-block " >
-<div class="container ">
-    <div class="row ">
-        <div class="col-12">
-            <div class="footer-container">
-                <div class="social-links">
-                    <a class="nav-link" href="https://www.facebook.com/">
-                        <i><img src="img/facebook.jpg" alt="" srcset=""></i> Facebook
-                    </a>
-                    <a class="nav-link" href="https://www.instagram.com/">
-                        <i><img src="img/instagram.jpg" alt=""></i> Instagram
-                    </a>
-                    <a class="nav-link" href="https://web.whatsapp.com/">
-                        <i><img src="img/whatsapp.jpg" alt=""></i> Whatsapp Web
-                    </a>
+    <footer class="text-white text-center py-3">
+        <div class="container">
+            <div class="row justify-content-around">
+                <div class="columna col-4">
+                    <a class="nav-link" href="https://www.facebook.com/"><img src="img/facebook.jpg" alt="Facebook"
+                            width="30px">Facebook</a>
+                    <a class="nav-link" href="https://www.instagram.com/"><img src="img/instagram.jpg" alt="Instagram"
+                            width="30px">Instagram</a>
+                    <a class="nav-link" href="https://web.whatsapp.com/"><img src="img/whatsapp.jpg" alt="Whatsapp"
+                            width="30px">Whatsapp</a>
                 </div>
-                <div class="logo">
-                    <strong>Veterinaria la Esperanza de tu mascota</strong>
-                    <br>
-                    <img src="img/Proyecto nuevo.png" alt="" width="100px" class="mb-3 mt-3">
+
+                <div class="columna col-4 text-align-center">
+                    <p>Veterinaria la ESPEranza de tu mascota</p>
+                    <img src="img/logo.png" alt="" width="100px">
                 </div>
-                <div class="contact-info">
-                  <p>Ecuador</p>
-                  <p>Santo Domingo</p>
-                  <p>+(593) 975 999 999</p>
-                  <p>Barrio: Luz de America</p>
-                  <p>veterinaria@esperanza.com</p>
-                    <div class="separator-line"></div>
+
+                <div class="columna col-4">
+                    <p>0999999999</p>
+                    <p>veterinaria@ESPEranza</p>
+                    <p>Santo Domingo-Ecuador</p>
                 </div>
             </div>
+
         </div>
-    </div>
-    <div class="row">
-        <div class="col-12 text-center">
-            <p class="mb-0">© 2023 Todos los derechos reservados</p>
-        </div>
-    </div>
-</div>
-</footer>
+    </footer>
+<script>
+    const tyc = document.getElementById("condiciones");
+    const enviar = document.getElementById("enviar");
+
+    const cambiarCondiciones = () => tyc.checked ? enviar.disabled = false : enviar.disabled = true
+</script>
+
 </body>
 
 </html>
