@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones y efectos</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="JS\jQuery v3.7.0.js"></script>
+    <script src="JS\jQuery Easing v1.3.js"></script>
+    <style>
+        .btn {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: #276955;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            font-size: 20px;
+            padding: 15px 30px;
+        }
+
+        .img-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .img-container img {
+            transition: all 0.5s ease;
+        }
+
+        .img-container:hover img {
+            transform: scale(1.2);
+        }
+
+        #container{
+            font-size: 25px;
+        }
+        #flecha{
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $(".columna").click(function () {
+                $(this).find("img").animate({
+                    width: "100%",
+                    height: "100%"
+                }, "slow");
+                $(this).find("h1").show("bounce", { times: 3 }, "slow");
+            });
+
+            $(".btn").mouseenter(function () {
+                $(this).animate({
+                    fontSize: "20px",
+                    padding: "15px 30px"
+                }, "slow", "easeOutBounce");
+            });
+
+            $(".btn").mouseleave(function () {
+                $(this).animate({
+                    fontSize: "16px",
+                    padding: "10px 20px"
+                }, "slow", "easeOutBounce");
+            });
+            $(".img-container").mouseenter(function () {
+                $(this).find("img").stop().animate(
+                    {
+                        transform: "scale(1.2)"
+                    },
+                    500,
+                    "easeOutCirc"
+                );
+            });
+
+            $(".img-container").mouseleave(function () {
+                $(this).find("img").stop().animate(
+                    {
+                        transform: "scale(1)"
+                    },
+                    500,
+                    "easeOutCirc"
+                );
+            });
+           
+            $(window).scroll(function(){
+                if ($(this).scrollTop()>150){
+                    $("#flecha").show();
+                }else{
+                    $("#flecha").hide();
+                }
+            });
+            $("#flecha").on("click", function(){
+                $("html, body").animate({scrollTop:0}, 2000);
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row my-5">
+            <div class="header col-12 col-sm col-md col-xl-12">
+                <h1 style="font: italic bold 30px/30px Georgia, serif">Especialidades</h1>
+            </div>
+        </div>
+
+        <div class="row justify-content-between mt-5 mb-5">
+            <div class="columna col-lg-3 col-xl-3 col-md-6 col-sm-12 mb-4">
+                <div class="text-center">
+                    <img src="img\1.jpg" class="rounded-circle" width="200px" height="120px">
+                </div>
+                <br>
+                <br>
+                <h1 style="font: italic bold 30px/30px Georgia, serif; text-align: center">Traumatología</h1>
+                <p>La traumatología es la rama de la veterinaria que se encarga del estudio del aparato locomotor,
+                    es decir,
+                    se encarga del estudio del sistema músculo-esquelético.
+                </p>
+                <p class="text-center">
+                    <button class="btn btn-info mt-4 mb-4" type="submit">Más información</button>
+                </p>
+            </div>
+
+            <div class="columna col-lg-3 col-xl-3 col-md-5 col-sm-12 mb-4">
+                <div class="text-center">
+                    <img src="img\2.jpg" class="rounded-circle" width="200px" height="120px">
+                </div>
+                <br>
+                <br>
+                <h1 style="font: italic bold 30px/30px Georgia, serif; text-align: center;">Neurología</h1>
+                <p>La neurología en pequeños animales supone un gran esfuerzo para el profesional veterinario,
+                    ya que los pacientes no son capaces de trasmitir verbalmente lo que sienten o donde les molesta.
+                    Nuestra mascota puede sufrir cualquier tipo de patología neurológica,
+                    desde extrusiones discales en las que puede dejar de caminar, hasta lesiones intracraneales con
+                    peor
+                    pronóstico.
+                </p>
+
+            </div>
+            <div class="columna col-lg-3 col-xl-3 col-md-12 col-sm-12 mb-4">
+                <div class="text-center">
+                    <img src="img\3.jpg" class="rounded-circle" width="200px" height="120px">
+                </div>
+                <br>
+                <br>
+                <h1 style="font: italic bold 30px/30px Georgia, serif; text-align: center">Oncología</h1>
+                <p>El principal propósito de la oncología veterinaria es perseguir el bienestar de los pacientes con
+                    cáncer.
+                    Mejorando la calidad de vida, minimizando los trastornos orgánicos que produce la enfermedad,
+                    prolongando así la sobrevida del paciente.
+                </p>
+            </div>
+        </div>
+    
+<img src="img\scroll.png" width="50px" height="50px" id="flecha">
+    <br>
+    <hr style="border-color: #276955; border-width: 10px; border-radius: 5px;"><br>
+
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center mb-5" style="font: italic bold 30px/30px Georgia, serif">Galería</h1>
+        </div>
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+            <div class="img-container">
+                <img src="img/g1.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water">
+            </div>
+            <div class="img-container">
+                <img src="img/g7.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" />
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4 mb-lg-0">
+            <div class="img-container">
+                <img src="img/g4.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Mountains in the Clouds" />
+            </div>
+            <div class="img-container">
+                <img src="img/g3.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4 mb-lg-0">
+            <div class="img-container">
+                <img src="img/g5.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea" />
+            </div>
+            <div class="img-container">
+                <img src="img/g8.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" />
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>

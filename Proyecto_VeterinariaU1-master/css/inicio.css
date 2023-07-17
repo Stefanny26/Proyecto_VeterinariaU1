@@ -1,0 +1,72 @@
+header{
+    background-color: #276955;
+   padding: 10px;
+}
+#contacto, #especialidad, #servicios, #inicio {
+    color: aliceblue;
+}
+
+#contacto:hover, #especialidad:hover, #servicios:hover, #inicio:hover {
+    color: #15a85f;
+}
+
+
+body {
+    background-color: #f8f9fa;
+
+
+  }
+
+  #container2 {
+    padding-top: 50px;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .mission-vision {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+
+  .mission-vision h3 {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .mission-vision p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .rounded-image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .styled-list {
+    list-style-type: square;
+    padding-left: 20px;
+  }
+footer{
+    background-color: #276955;
+}
+
+a{
+  color: #fff;
+}
+#con :hover  {
+  color: #a57141;
+}
+
+
+  
