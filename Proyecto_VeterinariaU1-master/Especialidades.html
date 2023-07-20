@@ -21,8 +21,10 @@
         }
 
         p {
-            font-family: "Times New Roman", Times, serif
+            font-family: "Times New Roman", Times, serif;
+
         }
+
         .btn {
             font-size: 16px;
             padding: 10px 20px;
@@ -30,20 +32,33 @@
             color: #fff;
             border: none;
             cursor: pointer;
-            transition: all 0.3s ease;
+
         }
 
         .columna {
 
             border: 2px solid #276955;
             border-radius: 5px;
-            padding-top: 5px;
+            padding-top: 20px;
             text-align: justify;
+        }
 
+        img {
+            cursor: pointer;
+        }
+
+        #C1,
+        #C2,
+        #C3,
+        #C4,
+        #C5,
+        #C6 {
+            display: none;
+            /* Agregamos esta línea para ocultar los párrafos inicialmente */
         }
 
 
-        /*estilos u2*/
+        
         .img-container {
             position: relative;
             overflow: hidden;
@@ -57,10 +72,11 @@
             transform: scale(1.1);
         }
 
-        #container{
+        #container {
             font-size: 25px;
         }
-        #flecha{
+
+        #flecha {
             position: fixed;
             bottom: 0;
             right: 0;
@@ -68,7 +84,7 @@
     </style>
     <script>
         $(document).ready(function () {
-            $(".columna").click(function () {
+            $(".columna").dblclick(function () {
                 $(this).find("img").animate({
                     width: "100%",
                     height: "100%"
@@ -76,7 +92,7 @@
                 $(this).find("h1").show("bounce", { times: 3 }, "slow");
             });
 
-            $(".columna").dblclick(function () {
+            $(".columna").click(function () {
                 $(this).find("img").animate({
                     width: "200px",
                     height: "120px"
@@ -87,14 +103,49 @@
                 $(this).animate({
                     fontSize: "20px",
                     padding: "15px 30px"
-                }, "slow", "easeOutBounce");
+                },"easeOutBounce");
             });
 
             $(".btn").mouseleave(function () {
                 $(this).animate({
                     fontSize: "16px",
                     padding: "10px 20px"
-                }, "slow", "easeOutBounce");
+                }, "easeOutBounce");
+            });
+
+            //Ocultar / Mostrar bloque
+            $(".btn1").click(function () {
+                $("#C1").toggle(1500);
+            }, function () {
+                $("#C1").toggle(1500);
+            });
+
+            $(".btn2").click(function () {
+                $("#C2").toggle(1500);
+            }, function () {
+                $("#C2").toggle(1500);
+            });
+
+            $(".btn3").click(function () {
+                $("#C3").toggle(1500);
+            }, function () {
+                $("#C3").toggle(1500);
+            });
+
+            $(".btn4").click(function () {
+                $("#C4").toggle(1500);
+            }, function () {
+                $("#C4").toggle(1500);
+            });
+            $(".btn5").click(function () {
+                $("#C5").toggle(1500);
+            }, function () {
+                $("#C5").toggle(1500);
+            });
+            $(".btn6").click(function () {
+                $("#C6").toggle(1500);
+            }, function () {
+                $("#C6").toggle(1500);
             });
 
             $(".img-container").mouseenter(function () {
@@ -117,15 +168,15 @@
                 );
             });
 
-            $(window).scroll(function(){
-                if ($(this).scrollTop()>150){
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 150) {
                     $("#flecha").show();
-                }else{
+                } else {
                     $("#flecha").hide();
                 }
             });
-            $("#flecha").on("click", function(){
-                $("html, body").animate({scrollTop:0}, 2000);
+            $("#flecha").on("click", function () {
+                $("html, body").animate({ scrollTop: 0 }, 2000);
             });
         });
 
@@ -163,6 +214,7 @@
         </nav>
     </header>
 
+
     <div class="container">
 
         <div class="row my-5">
@@ -177,15 +229,21 @@
                     <img src="img\1.jpg" class="rounded-circle" width="200px" height="120px">
                 </div>
                 <br>
-                <br>
+        
                 <h1 style="font: italic bold 30px/30px Georgia, serif; text-align: center">Traumatología</h1>
-                <p>La traumatología es la rama de la veterinaria que se encarga del estudio del aparato locomotor,
-                    es decir,
-                    se encarga del estudio del sistema músculo-esquelético.
+                <br>
+                <p id="C1"> La traumatología canina es una especialidad veterinaria que se dedica al estudio y
+                    tratamiento de las lesiones y enfermedades relacionadas con el sistema músculo-esquelético de los
+                    perros. Los profesionales en traumatología canina están capacitados para diagnosticar y tratar
+                    fracturas, luxaciones, problemas articulares y óseos, así como otras afecciones que afecten el
+                    aparato locomotor de los caninos. Su objetivo es mejorar la calidad de vida de los perros y
+                    ayudarlos a recuperar su movilidad y funcionalidad.
                 </p>
+
                 <p class="text-center">
-                    <a class="btn btn-info mt-4 mb-4" href="https://www.hvcruzcubierta.com/traumatologia-veterinaria/">Más información</a>
+                    <a class="btn btn-info mt-4 mb-4 btn1">Más información</a>
                 </p>
+
             </div>
 
 
@@ -194,17 +252,18 @@
                     <img src="img\2.jpg" class="rounded-circle" width="200px" height="120px">
                 </div>
                 <br>
-                <br>
+              
                 <h1 style="font: italic bold 30px/30px Georgia, serif; text-align: center;">Neurología</h1>
-                <p>La neurología en pequeños animales supone un gran esfuerzo para el profesional veterinario,
-                    ya que los pacientes no son capaces de trasmitir verbalmente lo que sienten o donde les molesta.
-                    Nuestra mascota puede sufrir cualquier tipo de patología neurológica,
-                    desde extrusiones discales en las que puede dejar de caminar, hasta lesiones intracraneales con
-                    peor
-                    pronóstico.
+                <br>
+                <p id="C2"> La neurología canina es una rama de la medicina veterinaria enfocada en el estudio y
+                    tratamiento de los trastornos neurológicos que afectan el sistema nervioso de los perros. Los
+                    neurólogos veterinarios están especializados en diagnosticar y tratar enfermedades como
+                    convulsiones, parálisis, trastornos del equilibrio y otros problemas relacionados con el sistema
+                    nervioso central y periférico de los caninos. Su labor es fundamental para brindar atención y
+                    cuidados a aquellos perros que presentan afecciones neurológicas.
                 </p>
                 <p class="text-center">
-                    <a class="btn btn-info mt-4 mb-4" href="https://www.clinicaveterinariazarpa.com/servicios/medicina-interna/neurologia/">Más información</a>
+                    <a class="btn btn-info mt-4 mb-4 btn2">Más información</a>
                 </p>
 
             </div>
@@ -213,15 +272,17 @@
                     <img src="img\3.jpg" class="rounded-circle" width="200px" height="120px">
                 </div>
                 <br>
-                <br>
+                
                 <h1 style="font: italic bold 30px/30px Georgia, serif; text-align: center">Oncología</h1>
-                <p>El principal propósito de la oncología veterinaria es perseguir el bienestar de los pacientes con
-                    cáncer.
-                    Mejorando la calidad de vida, minimizando los trastornos orgánicos que produce la enfermedad,
-                    prolongando así la sobrevida del paciente.
+                <br>
+                <p id="C3">La oncología canina es una disciplina veterinaria que se dedica al diagnóstico y tratamiento
+                    de los tumores y cánceres que afectan a los perros. Los especialistas en oncología canina trabajan
+                    para detectar de manera temprana la presencia de células cancerosas y determinar el tipo de cáncer
+                    que afecta al animal. A través de diversas terapias, cirugías y tratamientos, buscan mejorar la
+                    calidad de vida de los perros afectados por esta enfermedad y prolongar su tiempo de vida.
                 </p>
                 <p class="text-center">
-                    <a class="btn btn-info mt-4 mb-4" href="https://www.hvcruzcubierta.com/oncologia-quimioterapia/">Más información</a>
+                    <a class="btn btn-info mt-4 mb-4 btn3">Más información</a>
                 </p>
             </div>
         </div>
@@ -232,19 +293,18 @@
                     <img src="img\4.jpg" class="rounded-circle" width="200px" height="120px">
                 </div>
                 <br>
-                <br>
+              
 
-                <h1 style="font: italic bold 30px/30px Georgia, serif; text-align: center">Neuro-cirugías</h1>
-                <p>Realizamos todo tipo de intervenciones quirúrgicas del sistema nervioso central y sistema
-                    nervioso
-                    periférico
-                    o estructuras adyacentes a estos. Tenemos una amplia experiencia en cirugías oncológicas del
-                    sistema nervioso.
-                    Así también en otras afecciones tales como hidrocefalia y su tratamiento quirúrgico
-                    (como es la implantación de una válvula de drenaje con derivación ventrículo peritoneal).
+                <h1 style="font: italic bold 30px/30px Georgia, serif; text-align: center">Neuro-cirugías</h1>  <br>
+                <p id="C4">Las neuro-cirugías caninas son intervenciones quirúrgicas realizadas en el sistema nervioso
+                    central y periférico de los perros. Estas cirugías pueden incluir la corrección de hernias discales,
+                    la extirpación de tumores cerebrales, la reparación de nervios dañados, entre otras. Los
+                    neurocirujanos veterinarios poseen una amplia experiencia en este tipo de procedimientos y están
+                    comprometidos con brindar los mejores cuidados y resultados para los pacientes caninos que requieren
+                    de estas intervenciones.
                 </p>
                 <p class="text-center">
-                    <a class="btn btn-info mt-4 mb-4" href="http://veterinariaenweb.com.ar/oncologia/cirugias/neurocirugia-veterinaria.php">Más información</a>
+                    <a class="btn btn-info mt-4 mb-4 btn4">Más información</a>
                 </p>
 
 
@@ -255,18 +315,16 @@
                     <img src="img\5.jpg" class="rounded-circle" width="200px" height="120px">
                 </div>
                 <br>
-                <br>
-                <h1 style="font: italic bold 30px/30px Georgia, serif; text-align: center">Dermatología</h1>
-                <p>La dermatología veterinaria es el estudio veterinario que se encarga del diagnóstico y
-                    tratamiento de
-                    trastornos de la piel,
-                    las orejas, el cabello, las uñas, los cascos y la boca de los animales. Específicamente, los
-                    dermatólogos veterinarios
-                    tienen capacitación y experiencia significativas en el manejo de enfermedades alérgicas de la
-                    piel.
+               
+                <h1 style="font: italic bold 30px/30px Georgia, serif; text-align: center">Dermatología</h1> <br>
+                <p id="C5">La dermatología canina es la especialidad veterinaria encargada del diagnóstico y tratamiento
+                    de las afecciones cutáneas que afectan a los perros. Los dermatólogos veterinarios están capacitados
+                    para tratar problemas como alergias, infecciones, dermatitis, y otras enfermedades de la piel, las
+                    orejas, el cabello y las uñas de los caninos. Su trabajo es esencial para mantener la salud y el
+                    bienestar de la piel de los perros y prevenir posibles complicaciones.
                 </p>
                 <p class="text-center">
-                    <a class="btn btn-info mt-4 mb-4" href="https://www.clinicaveterinariazarpa.com/servicios/medicina-interna/dermatologia/">Más información</a>
+                    <a class="btn btn-info mt-4 mb-4 btn5">Más información</a>
                 </p>
 
             </div>
@@ -275,13 +333,17 @@
                     <img src="img\6.jpg" class="rounded-circle" width="200px" height="120px">
                 </div>
                 <br>
-                <br>
-                <h1 style="font: italic bold 30px/30px Georgia, serif; text-align: center">Fisioterapia</h1>
-                <p>Trabajamos con diferentes técnicas para aliviar dolores y molestias postoperatorias o
-                    anomalías neurológicas de tus mascotas.
+               
+                <h1 style="font: italic bold 30px/30px Georgia, serif; text-align: center">Fisioterapia</h1> <br>
+                <p id="C6"> La fisioterapia canina es una disciplina terapéutica que tiene como objetivo aliviar las
+                    molestias y dolencias en los perros a través de técnicas y ejercicios físicos. Los fisioterapeutas
+                    caninos trabajan en la rehabilitación de los canes, especialmente después de cirugías, traumatismos
+                    o afecciones neurológicas. Mediante la aplicación de masajes, movilizaciones y ejercicios, buscan
+                    mejorar la movilidad, la fuerza muscular y la recuperación de los perros, promoviendo su bienestar y
+                    calidad de vida.
                 </p>
                 <p class="text-center">
-                    <a class="btn btn-info mt-4 mb-4" href="https://www.elisamoreno.com/fisioterapia-y-rehabilitacion-canina/">Más información</a>
+                    <a class="btn btn-info mt-4 mb-4 btn6">Más información</a>
                 </p>
             </div>
         </div>
